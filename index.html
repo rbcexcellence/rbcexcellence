@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RBC Excellence - Coming Soon. Etwas Großartiges ist in Vorbereitung. Bleiben Sie gespannt auf unsere innovativen Lösungen und Services.">
+    <meta name="keywords" content="RBC Excellence, Coming Soon, Innovation, Excellence">
+    <meta name="author" content="RBC Excellence">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com data:; img-src 'self' data:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
+    <title>Coming Soon - RBC Excellence</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        #root {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // Translations object
+        const translations = {
+            de: {
+                home: 'Home',
+                contact: 'Kontakt',
+                imprint: 'Impressum',
+                privacy: 'Datenschutz',
+                comingSoon: 'Coming Soon',
+                somethingGreat: 'Etwas Grossartiges ist in Vorbereitung',
+                footerText: '© RBC Excellence - Alle Rechte vorbehalten',
+                email: 'E-Mail',
+                phone: 'Telefon',
+                address: 'Adresse',
+                followUs: 'Folge uns',
+                switzerland: 'Schweiz',
+                contactAddress: 'Kontaktadresse',
+                contactForm: 'Kontaktformular',
+                contactIntro: 'Haben Sie Fragen oder möchten Sie mehr erfahren? Schreiben Sie uns eine Nachricht!',
+                yourName: 'Ihr Name',
+                yourEmail: 'Ihre E-Mail',
+                yourMessage: 'Ihre Nachricht',
+                sendMessage: 'Nachricht senden',
+                sending: 'Wird gesendet...',
+                messageSent: 'Nachricht erfolgreich gesendet!',
+                messageError: 'Fehler beim Senden. Bitte versuchen Sie es erneut.',
+                nameRequired: 'Name ist erforderlich',
+                emailRequired: 'E-Mail ist erforderlich',
+                messageRequired: 'Nachricht ist erforderlich',
+                orContact: 'Unsere Kontaktdaten:',
+                getInTouch: 'Kontaktieren Sie uns',
+                privacyTitle: 'Datenschutzerklärung',
+                imprintTitle: 'Impressum',
+                cookieText: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Mit der Nutzung unserer Website stimmen Sie unserer',
+                privacyPolicy: 'Datenschutzerklärung',
+                cookieAccept: 'Akzeptieren',
+                cookieDecline: 'Ablehnen',
+                responsible: 'Verantwortliche Stelle',
+                responsibleText: 'Verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:',
+                representatives: 'Vertretungsberechtigte Personen:',
+                ceo: 'Riart Çekaj, Geschäftsführer',
+                disclaimer: 'Haftungsausschluss:',
+                disclaimerText: 'Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen. Haftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.',
+                linkLiability: 'Haftung für Links:',
+                linkLiabilityText: 'Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt.',
+                copyright: 'Urheberrechte:',
+                copyrightText: 'Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf der Website gehören ausschliesslich dem Betreiber dieser Website oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.',
+                privacyIntro: 'Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Wir halten diese Bestimmungen ein. Persönliche Daten werden streng vertraulich behandelt und weder an Dritte verkauft noch weiter gegeben.',
+                dataProcessing: 'Bearbeitung von Personendaten',
+                dataProcessingText: 'Personendaten sind alle Angaben, die sich auf eine bestimmte oder bestimmbare Person beziehen. Eine betroffene Person ist eine Person, über die Personendaten bearbeitet werden. Bearbeiten umfasst jeden Umgang mit Personendaten, unabhängig von den angewandten Mitteln und Verfahren, insbesondere das Aufbewahren, Bekanntgeben, Beschaffen, Löschen, Speichern, Verändern, Vernichten und Verwenden von Personendaten.',
+                serverLogs: 'Server-Log-Dateien',
+                serverLogsText: 'Der Provider dieser Website erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind: Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt.',
+                yourRights: 'Ihre Rechte',
+                yourRightsText: 'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.',
+                sslEncryption: 'SSL- bzw. TLS-Verschlüsselung',
+                sslEncryptionText: 'Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.',
+                dataPortability: 'Recht auf Datenübertragbarkeit',
+                dataPortabilityText: 'Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.'
+            },
+            en: {
+                home: 'Home',
+                contact: 'Contact',
+                imprint: 'Imprint',
+                privacy: 'Privacy',
+                comingSoon: 'Coming Soon',
+                somethingGreat: 'Something Great is in Preparation',
+                footerText: '© RBC Excellence - All Rights Reserved',
+                email: 'Email',
+                phone: 'Phone',
+                address: 'Address',
+                followUs: 'Follow Us',
+                switzerland: 'Switzerland',
+                contactAddress: 'Contact Address',
+                contactForm: 'Contact Form',
+                contactIntro: 'Have questions or want to learn more? Send us a message!',
+                yourName: 'Your Name',
+                yourEmail: 'Your Email',
+                yourMessage: 'Your Message',
+                sendMessage: 'Send Message',
+                sending: 'Sending...',
+                messageSent: 'Message sent successfully!',
+                messageError: 'Error sending message. Please try again.',
+                nameRequired: 'Name is required',
+                emailRequired: 'Email is required',
+                messageRequired: 'Message is required',
+                orContact: 'Our contact details:',
+                getInTouch: 'Get in Touch',
+                privacyTitle: 'Privacy Policy',
+                imprintTitle: 'Imprint',
+                cookieText: 'We use cookies to improve your experience. By using our website, you agree to our',
+                privacyPolicy: 'Privacy Policy',
+                cookieAccept: 'Accept',
+                cookieDecline: 'Decline',
+                responsible: 'Responsible Party',
+                responsibleText: 'The responsible party for data processing on this website is:',
+                representatives: 'Authorized Representatives:',
+                ceo: 'Riart Çekaj, CEO',
+                disclaimer: 'Disclaimer:',
+                disclaimerText: 'The author assumes no liability for the correctness, accuracy, timeliness, reliability, and completeness of the information. Liability claims against the author for material or immaterial damage caused by access to or use or non-use of the published information, through misuse of the connection, or through technical malfunctions are excluded.',
+                linkLiability: 'Liability for Links:',
+                linkLiabilityText: 'References and links to third-party websites are outside our area of responsibility. Any responsibility for such websites is declined.',
+                copyright: 'Copyrights:',
+                copyrightText: 'The copyright and all other rights to content, images, photos, or other files on the website belong exclusively to the operator of this website or the specifically named rights holders. Written consent from the copyright holders must be obtained in advance for the reproduction of any elements.',
+                privacyIntro: 'Based on Article 13 of the Swiss Federal Constitution and the data protection provisions of the federal government (Data Protection Act, DSG), every person has the right to protection of their privacy as well as protection against misuse of their personal data. We comply with these provisions. Personal data is treated strictly confidentially and is neither sold nor passed on to third parties.',
+                dataProcessing: 'Processing of Personal Data',
+                dataProcessingText: 'Personal data is any information that relates to an identified or identifiable person. A data subject is a person about whom personal data is processed. Processing includes any handling of personal data, regardless of the means and procedures used, in particular the storage, disclosure, acquisition, deletion, storage, modification, destruction, and use of personal data.',
+                serverLogs: 'Server Log Files',
+                serverLogsText: 'The provider of this website automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are: browser type and version, operating system used, referrer URL, hostname of the accessing computer, time of server request, and IP address. This data cannot be assigned to specific persons and is not merged with other data sources.',
+                yourRights: 'Your Rights',
+                yourRightsText: 'You have the right at any time to receive free information about your stored personal data, its origin and recipients, and the purpose of data processing, as well as a right to correction or deletion of this data. You can contact us at any time at the address given in the imprint for this and other questions about personal data.',
+                sslEncryption: 'SSL or TLS Encryption',
+                sslEncryptionText: 'This site uses SSL or TLS encryption for security reasons and to protect the transmission of confidential content. You can recognize an encrypted connection by the fact that the address line of the browser changes from "http://" to "https://" and by the lock symbol in your browser line.',
+                dataPortability: 'Right to Data Portability',
+                dataPortabilityText: 'You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a contract handed over to you or to a third party in a common, machine-readable format.'
+            },
+            fr: {
+                home: 'Accueil',
+                contact: 'Contact',
+                imprint: 'Mentions légales',
+                privacy: 'Confidentialité',
+                comingSoon: 'Bientôt disponible',
+                somethingGreat: 'Quelque chose de génial est en préparation',
+                footerText: '© RBC Excellence - Tous droits réservés',
+                email: 'E-mail',
+                phone: 'Téléphone',
+                address: 'Adresse',
+                followUs: 'Suivez-nous',
+                switzerland: 'Suisse',
+                contactAddress: 'Adresse de contact',
+                contactForm: 'Formulaire de contact',
+                contactIntro: 'Vous avez des questions ou souhaitez en savoir plus? Envoyez-nous un message!',
+                yourName: 'Votre nom',
+                yourEmail: 'Votre e-mail',
+                yourMessage: 'Votre message',
+                sendMessage: 'Envoyer le message',
+                sending: 'Envoi en cours...',
+                messageSent: 'Message envoyé avec succès!',
+                messageError: 'Erreur lors de l\'envoi. Veuillez réessayer.',
+                nameRequired: 'Le nom est requis',
+                emailRequired: 'L\'e-mail est requis',
+                messageRequired: 'Le message est requis',
+                orContact: 'Nos coordonnées:',
+                getInTouch: 'Contactez-nous',
+                privacyTitle: 'Politique de confidentialité',
+                imprintTitle: 'Mentions légales',
+                cookieText: 'Nous utilisons des cookies pour améliorer votre expérience. En utilisant notre site web, vous acceptez notre',
+                privacyPolicy: 'Politique de confidentialité',
+                cookieAccept: 'Accepter',
+                cookieDecline: 'Refuser',
+                responsible: 'Responsable',
+                responsibleText: 'Le responsable du traitement des données sur ce site web est:',
+                representatives: 'Représentants autorisés:',
+                ceo: 'Riart Çekaj, Directeur général',
+                disclaimer: 'Clause de non-responsabilité:',
+                disclaimerText: "L'auteur n'assume aucune responsabilité quant à l'exactitude, la précision, l'actualité, la fiabilité et l'exhaustivité des informations. Les réclamations en responsabilité contre l'auteur pour des dommages matériels ou immatériels causés par l'accès ou l'utilisation ou la non-utilisation des informations publiées, par un usage abusif de la connexion ou par des perturbations techniques sont exclues.",
+                linkLiability: 'Responsabilité pour les liens:',
+                linkLiabilityText: "Les références et liens vers des sites web tiers sont en dehors de notre domaine de responsabilité. Toute responsabilité pour de tels sites web est déclinée.",
+                copyright: 'Droits d\'auteur:',
+                copyrightText: "Les droits d'auteur et tous les autres droits sur le contenu, les images, les photos ou autres fichiers sur le site web appartiennent exclusivement à l'exploitant de ce site web ou aux détenteurs de droits spécifiquement nommés. Le consentement écrit des détenteurs de droits d'auteur doit être obtenu à l'avance pour la reproduction de tout élément.",
+                privacyIntro: "Conformément à l'article 13 de la Constitution fédérale suisse et aux dispositions en matière de protection des données du gouvernement fédéral (Loi sur la protection des données, LPD), toute personne a droit à la protection de sa vie privée ainsi qu'à la protection contre l'utilisation abusive de ses données personnelles. Nous respectons ces dispositions. Les données personnelles sont traitées de manière strictement confidentielle et ne sont ni vendues ni transmises à des tiers.",
+                dataProcessing: 'Traitement des données personnelles',
+                dataProcessingText: "Les données personnelles sont toutes les informations qui se rapportent à une personne identifiée ou identifiable. Une personne concernée est une personne sur laquelle des données personnelles sont traitées. Le traitement comprend toute manipulation de données personnelles, indépendamment des moyens et procédures utilisés, en particulier la conservation, la divulgation, l'acquisition, la suppression, le stockage, la modification, la destruction et l'utilisation de données personnelles.",
+                serverLogs: 'Fichiers journaux du serveur',
+                serverLogsText: "Le fournisseur de ce site web collecte et stocke automatiquement des informations dans des fichiers journaux du serveur, que votre navigateur nous transmet automatiquement. Il s'agit de: type et version du navigateur, système d'exploitation utilisé, URL de référence, nom d'hôte de l'ordinateur accédant, heure de la demande du serveur et adresse IP. Ces données ne peuvent pas être attribuées à des personnes spécifiques et ne sont pas fusionnées avec d'autres sources de données.",
+                yourRights: 'Vos droits',
+                yourRightsText: "Vous avez le droit à tout moment d'obtenir gratuitement des informations sur vos données personnelles stockées, leur origine et leurs destinataires, et le but du traitement des données, ainsi qu'un droit de correction ou de suppression de ces données. Vous pouvez nous contacter à tout moment à l'adresse indiquée dans les mentions légales pour cette question et d'autres questions concernant les données personnelles.",
+                sslEncryption: 'Cryptage SSL ou TLS',
+                sslEncryptionText: 'Ce site utilise le cryptage SSL ou TLS pour des raisons de sécurité et pour protéger la transmission de contenu confidentiel. Vous pouvez reconnaître une connexion cryptée par le fait que la ligne d\'adresse du navigateur passe de "http://" à "https://" et par le symbole de cadenas dans votre ligne de navigateur.',
+                dataPortability: 'Droit à la portabilité des données',
+                dataPortabilityText: "Vous avez le droit de faire transférer à vous-même ou à un tiers, dans un format courant et lisible par machine, les données que nous traitons automatiquement sur la base de votre consentement ou en exécution d'un contrat."
+            },
+            sq: {
+                home: 'Ballina',
+                contact: 'Kontakt',
+                imprint: 'Impressum',
+                privacy: 'Privatësia',
+                comingSoon: 'Së Shpejti',
+                somethingGreat: 'Diçka e Madhe është në Përgatitje',
+                footerText: '© RBC Excellence - Të gjitha të drejtat e rezervuara',
+                email: 'Email',
+                phone: 'Telefon',
+                address: 'Adresa',
+                followUs: 'Na ndiqni',
+                switzerland: 'Zvicër',
+                contactAddress: 'Adresa e Kontaktit',
+                contactForm: 'Formulari i Kontaktit',
+                contactIntro: 'Keni pyetje ose dëshironi të mësoni më shumë? Na dërgoni një mesazh!',
+                yourName: 'Emri juaj',
+                yourEmail: 'Email-i juaj',
+                yourMessage: 'Mesazhi juaj',
+                sendMessage: 'Dërgo Mesazhin',
+                sending: 'Duke dërguar...',
+                messageSent: 'Mesazhi u dërgua me sukses!',
+                messageError: 'Gabim gjatë dërgimit. Ju lutem provoni përsëri.',
+                nameRequired: 'Emri është i detyrueshëm',
+                emailRequired: 'Email-i është i detyrueshëm',
+                messageRequired: 'Mesazhi është i detyrueshëm',
+                orContact: 'Të dhënat tona të kontaktit:',
+                getInTouch: 'Na Kontaktoni',
+                privacyTitle: 'Politika e Privatësisë',
+                imprintTitle: 'Impressum',
+                cookieText: 'Ne përdorim cookies për të përmirësuar përvojën tuaj. Duke përdorur faqen tonë, ju pranoni',
+                privacyPolicy: 'Politikën e Privatësisë',
+                cookieAccept: 'Prano',
+                cookieDecline: 'Refuzo',
+                responsible: 'Përgjegjësi',
+                responsibleText: 'Përgjegjësi për përpunimin e të dhënave në këtë faqe është:',
+                representatives: 'Përfaqësuesit e Autorizuar:',
+                ceo: 'Riart Çekaj, Drejtor Ekzekutiv',
+                disclaimer: 'Mohim Përgjegjësie:',
+                disclaimerText: 'Autori nuk merr përgjegjësi për saktësinë, precizitetin, aktualitetin, besueshmërinë dhe plotësinë e informacionit. Pretendimet e përgjegjësisë kundër autorit për dëmtime materiale ose jo-materiale të shkaktuara nga aksesi ose përdorimi ose mospërdorimi i informacionit të publikuar, nga keqpërdorimi i lidhjes ose nga çrregullimet teknike janë të përjashtuara.',
+                linkLiability: 'Përgjegjësia për Lidhjet:',
+                linkLiabilityText: 'Referencat dhe lidhjet me faqe të palëve të treta janë jashtë fushës sonë të përgjegjësisë. Çdo përgjegjësi për faqe të tilla refuzohet.',
+                copyright: 'Të Drejtat e Autorit:',
+                copyrightText: 'Të drejtat e autorit dhe të gjitha të drejtat e tjera për përmbajtjen, imazhet, fotografitë ose skedarë të tjerë në faqe i takojnë ekskluzivisht operatorit të kësaj faqe ose mbajtësve të të drejtave të përmendur specifikisht. Pëlqimi me shkrim nga mbajtësit e të drejtave të autorit duhet marrë paraprakisht për riprodhimin e çdo elementi.',
+                privacyIntro: 'Bazuar në Nenin 13 të Kushtetutës Federale Zvicerane dhe dispozitat e mbrojtjes së të dhënave të qeverisë federale (Ligji i Mbrojtjes së të Dhënave, DSG), çdo person ka të drejtën e mbrojtjes së jetës private si dhe mbrojtjen nga keqpërdorimi i të dhënave personale. Ne respektojmë këto dispozita. Të dhënat personale trajtohen me konfidencialitet të rreptë dhe as nuk shiten as nuk jepen tek palë të treta.',
+                dataProcessing: 'Përpunimi i të Dhënave Personale',
+                dataProcessingText: 'Të dhënat personale janë çdo informacion që lidhet me një person të identifikuar ose të identifikueshëm. Një subjekt i të dhënave është një person për të cilin përpunohen të dhëna personale. Përpunimi përfshin çdo trajtim të të dhënave personale, pavarësisht nga mjetet dhe procedurat e përdorura, në veçanti ruajtjen, zbulimin, marrjen, fshirjen, ruajtjen, modifikimin, shkatërrimin dhe përdorimin e të dhënave personale.',
+                serverLogs: 'Skedarët e Log-ut të Serverit',
+                serverLogsText: 'Ofruesi i kësaj faqe automatikisht mblidh dhe ruan informacion në skedarë të ashtuquajtur server-log, të cilat shfletuesi juaj automatikisht na transmeton. Këto janë: lloji dhe versioni i shfletuesit, sistemi operativ i përdorur, URL-ja e referuesit, emri i hostit të kompjuterit që aksedon, koha e kërkesës së serverit dhe adresa IP. Këto të dhëna nuk mund t’u caktohen personave specifikë dhe nuk bashkohen me burime të tjera të të dhënave.',
+                yourRights: 'Të Drejtat Tuaja',
+                yourRightsText: 'Ju keni të drejtë në çdo kohë të merrni informacion falas për të dhënat tuaja personale të ruajtura, origjinën dhe marrësit e tyre, dhe qëllimin e përpunimit të të dhënave, si dhe të drejtën për korrigjimin ose fshirjen e këtyre të dhënave. Mund të na kontaktoni në çdo kohë në adresën e dhënë në impressum për këtë dhe pyetje të tjera rreth të dhënave personale.',
+                sslEncryption: 'Enkriptimi SSL ose TLS',
+                sslEncryptionText: 'Kjo faqe përdor enkriptimin SSL ose TLS për arsye sigurie dhe për të mbrojtur transmetimin e përmbajtjes konfidenciale. Mund ta njihni një lidhje të enkriptuar nga fakti që linja e adresës së shfletuesit ndryshon nga "http://" në "https://" dhe nga simboli i kyçjes në linjën tuaj të shfletuesit.',
+                dataPortability: 'E Drejta e Transferueshmërisë së të Dhënave',
+                dataPortabilityText: 'Ju keni të drejtë të keni të dhëna që ne përpunojmë automatikisht bazuar në pëlqimin tuaj ose në përmbushje të një kontrate të dorëzuara tek ju ose tek një palë e tretë në një format të zakonshëm dhe të lexueshëm nga makina.'
+            }
+        };
+
+        function ComingSoon() {
+            const [dots, setDots] = useState('');
+            const [currentPage, setCurrentPage] = useState('home');
+            const [showCookieBanner, setShowCookieBanner] = useState(true);
+            const [darkMode, setDarkMode] = useState(true);
+            const [language, setLanguage] = useState('de');
+            const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+            const [formStatus, setFormStatus] = useState('');
+            const [isSubmitting, setIsSubmitting] = useState(false);
+            const [touchStart, setTouchStart] = useState(null);
+            const [touchEnd, setTouchEnd] = useState(null);
+            const [isPulling, setIsPulling] = useState(false);
+            const [pullDistance, setPullDistance] = useState(0);
+            const [formServiceDown, setFormServiceDown] = useState(false); // true = show offline notice
+
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    setDots(prev => prev.length >= 3 ? '' : prev + '.');
+                }, 500);
+                return () => clearInterval(interval);
+            }, []);
+
+            useEffect(() => {
+                const cookieConsent = localStorage.getItem('cookieConsent');
+                if (cookieConsent) {
+                    setShowCookieBanner(false);
+                }
+                const savedMode = localStorage.getItem('darkMode');
+                if (savedMode !== null) {
+                    setDarkMode(savedMode === 'true');
+                } else {
+                    // Set default to dark mode on first visit
+                    setDarkMode(true);
+                    localStorage.setItem('darkMode', 'true');
+                }
+                
+                // Auto-detect browser language
+                const savedLanguage = localStorage.getItem('language');
+                if (savedLanguage && ['de', 'en', 'fr', 'sq'].includes(savedLanguage)) {
+                    setLanguage(savedLanguage);
+                } else {
+                    // Detect browser language
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    const langCode = browserLang.split('-')[0].toLowerCase();
+                    
+                    if (['de', 'en', 'fr', 'sq'].includes(langCode)) {
+                        setLanguage(langCode);
+                        localStorage.setItem('language', langCode);
+                    } else {
+                        // Default to English if language not supported
+                        setLanguage('en');
+                        localStorage.setItem('language', 'en');
+                    }
+                }
+            }, []);
+
+            // Get translation helper
+            const t = (key) => translations[language][key] || key;
+
+            // Local, small notice texts for form service outage (keeps translations untouched)
+            const formNotices = {
+                de: 'Das Kontaktformular ist momentan nicht verfügbar. Bitte sende deine Anfrage direkt per E-Mail an',
+                en: 'The contact form is currently unavailable. Please send your enquiry directly by email to',
+                fr: 'Le formulaire de contact est actuellement indisponible. Veuillez envoyer votre demande directement par e-mail à',
+                sq: 'Formulari i kontaktit për momentin nuk është i disponueshëm. Ju lutemi dërgoni pyetjen tuaj drejtpërdrejt me e-mail në'
+            };
+
+            // Change language
+            const changeLanguage = (lang) => {
+                setLanguage(lang);
+                localStorage.setItem('language', lang);
+                setMobileMenuOpen(false);
+            };
+
+            const toggleDarkMode = () => {
+                const newMode = !darkMode;
+                setDarkMode(newMode);
+                localStorage.setItem('darkMode', newMode.toString());
+            };
+
+            const acceptCookies = () => {
+                localStorage.setItem('cookieConsent', 'true');
+                setShowCookieBanner(false);
+            };
+
+            const declineCookies = () => {
+                localStorage.setItem('cookieConsent', 'false');
+                setShowCookieBanner(false);
+            };
+
+            const handleFormSubmit = async (e) => {
+                e.preventDefault();
+                setIsSubmitting(true);
+                setFormStatus('');
+
+                const formData = new FormData(e.target);
+                
+                try {
+                    const response = await fetch(e.target.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        setFormStatus('success');
+                        e.target.reset();
+                        setTimeout(() => setFormStatus(''), 5000);
+                    } else {
+                        setFormStatus('error');
+                    }
+                } catch (error) {
+                    setFormStatus('error');
+                }
+                
+                setIsSubmitting(false);
+            };
+
+            // Swipe gesture handling
+            const minSwipeDistance = 50;
+            const pages = ['home', 'contact', 'imprint', 'privacy'];
+
+            const onTouchStart = (e) => {
+                setTouchEnd(null);
+                setTouchStart(e.targetTouches[0].clientX);
+            };
+
+            const onTouchMove = (e) => {
+                setTouchEnd(e.targetTouches[0].clientX);
+                
+                // Pull to refresh detection
+                if (window.scrollY === 0 && e.targetTouches[0].clientY > touchStart) {
+                    const distance = e.targetTouches[0].clientY - touchStart;
+                    if (distance > 0 && distance < 150) {
+                        setIsPulling(true);
+                        setPullDistance(distance);
+                    }
+                }
+            };
+
+            const onTouchEnd = () => {
+                if (!touchStart || !touchEnd) {
+                    // Handle pull to refresh
+                    if (isPulling && pullDistance > 80) {
+                        window.location.reload();
+                    }
+                    setIsPulling(false);
+                    setPullDistance(0);
+                    return;
+                }
+                
+                const distance = touchStart - touchEnd;
+                const isLeftSwipe = distance > minSwipeDistance;
+                const isRightSwipe = distance < -minSwipeDistance;
+                
+                const currentIndex = pages.indexOf(currentPage);
+                
+                if (isLeftSwipe && currentIndex < pages.length - 1) {
+                    // Swipe left - next page
+                    setCurrentPage(pages[currentIndex + 1]);
+                } else if (isRightSwipe && currentIndex > 0) {
+                    // Swipe right - previous page
+                    setCurrentPage(pages[currentIndex - 1]);
+                }
+                
+                setIsPulling(false);
+                setPullDistance(0);
+            };
+
+            return (
+                <div 
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        background: darkMode 
+                            ? 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)' 
+                            : 'linear-gradient(135deg, #e8eef2 0%, #d4dce6 100%)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
+                >
+                    {/* Pull to Refresh Indicator */}
+                    {isPulling && (
+                        <div style={{
+                            position: 'fixed',
+                            top: `${pullDistance - 40}px`,
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            zIndex: 9999,
+                            background: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '50%',
+                            padding: '15px',
+                            transition: 'opacity 0.3s ease',
+                            opacity: pullDistance > 80 ? 1 : 0.5
+                        }}>
+                            <div style={{
+                                width: '30px',
+                                height: '30px',
+                                border: `3px solid ${darkMode ? 'white' : '#1a1a2e'}`,
+                                borderTopColor: 'transparent',
+                                borderRadius: '50%',
+                                animation: pullDistance > 80 ? 'spin 1s linear infinite' : 'none',
+                                transform: `rotate(${pullDistance * 3}deg)`
+                            }}></div>
+                        </div>
+                    )}
+                    {/* Navigation Bar */}
+                    <nav style={{
+                        width: '100%',
+                        padding: '15px 20px',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        background: darkMode ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.2)',
+                        backdropFilter: 'blur(10px)',
+                        position: 'relative',
+                        zIndex: 10,
+                        borderBottom: darkMode ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
+                        flexWrap: 'wrap',
+                        gap: '15px'
+                    }}>
+                        <img 
+                            src="logo.png" 
+                            alt="RBC Excellence Logo" 
+                            style={{
+                                height: 'clamp(35px, 8vw, 50px)',
+                                width: 'auto',
+                                objectFit: 'contain'
+                            }}
+                        />
+                        
+                        {/* Hamburger Menu Button - Mobile Only */}
+                        <button
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            style={{
+                                display: 'none',
+                                background: 'transparent',
+                                border: 'none',
+                                cursor: 'pointer',
+                                padding: '10px',
+                                zIndex: 1001,
+                                '@media (maxWidth: 768px)': {
+                                    display: 'block'
+                                }
+                            }}
+                            className="hamburger-menu"
+                        >
+                            <div style={{
+                                width: '30px',
+                                height: '3px',
+                                background: darkMode ? 'white' : '#1a1a2e',
+                                margin: '6px 0',
+                                transition: 'all 0.3s ease',
+                                transform: mobileMenuOpen ? 'rotate(-45deg) translate(-6px, 6px)' : 'none'
+                            }}></div>
+                            <div style={{
+                                width: '30px',
+                                height: '3px',
+                                background: darkMode ? 'white' : '#1a1a2e',
+                                margin: '6px 0',
+                                transition: 'all 0.3s ease',
+                                opacity: mobileMenuOpen ? 0 : 1
+                            }}></div>
+                            <div style={{
+                                width: '30px',
+                                height: '3px',
+                                background: darkMode ? 'white' : '#1a1a2e',
+                                margin: '6px 0',
+                                transition: 'all 0.3s ease',
+                                transform: mobileMenuOpen ? 'rotate(45deg) translate(-6px, -6px)' : 'none'
+                            }}></div>
+                        </button>
+
+                        {/* Desktop Navigation */}
+                        <div style={{
+                            display: 'flex',
+                            gap: 'clamp(15px, 4vw, 30px)',
+                            flexWrap: 'wrap',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}
+                        className="desktop-nav"
+                        >
+                            <a 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setCurrentPage('home');
+                                }}
+                                style={{
+                                    color: darkMode 
+                                        ? (currentPage === 'home' ? 'white' : 'rgba(255, 255, 255, 0.7)')
+                                        : (currentPage === 'home' ? '#1a1a2e' : 'rgba(0, 0, 0, 0.7)'),
+                                    textDecoration: 'none',
+                                    fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+                                    fontWeight: currentPage === 'home' ? '600' : '400',
+                                    transition: 'all 0.3s ease',
+                                    borderBottom: currentPage === 'home' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                    paddingBottom: '5px'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.color = darkMode ? 'white' : '#1a1a2e';
+                                }}
+                                onMouseOut={(e) => {
+                                    if (currentPage !== 'home') {
+                                        e.target.style.color = darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+                                    }
+                                }}
+                            >
+                                {t('home')}
+                            </a>
+                            <a 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setCurrentPage('contact');
+                                }}
+                                style={{
+                                    color: darkMode 
+                                        ? (currentPage === 'contact' ? 'white' : 'rgba(255, 255, 255, 0.7)')
+                                        : (currentPage === 'contact' ? '#1a1a2e' : 'rgba(0, 0, 0, 0.7)'),
+                                    textDecoration: 'none',
+                                    fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+                                    fontWeight: currentPage === 'contact' ? '600' : '400',
+                                    transition: 'all 0.3s ease',
+                                    borderBottom: currentPage === 'contact' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                    paddingBottom: '5px'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.color = darkMode ? 'white' : '#1a1a2e';
+                                }}
+                                onMouseOut={(e) => {
+                                    if (currentPage !== 'contact') {
+                                        e.target.style.color = darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+                                    }
+                                }}
+                            >
+                                {t('contact')}
+                            </a>
+                            <a 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setCurrentPage('imprint');
+                                }}
+                                style={{
+                                    color: darkMode 
+                                        ? (currentPage === 'imprint' ? 'white' : 'rgba(255, 255, 255, 0.7)')
+                                        : (currentPage === 'imprint' ? '#1a1a2e' : 'rgba(0, 0, 0, 0.7)'),
+                                    textDecoration: 'none',
+                                    fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+                                    fontWeight: currentPage === 'imprint' ? '600' : '400',
+                                    transition: 'all 0.3s ease',
+                                    borderBottom: currentPage === 'imprint' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                    paddingBottom: '5px'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.color = darkMode ? 'white' : '#1a1a2e';
+                                }}
+                                onMouseOut={(e) => {
+                                    if (currentPage !== 'imprint') {
+                                        e.target.style.color = darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+                                    }
+                                }}
+                            >
+                                {t('imprint')}
+                            </a>
+                            <a 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setCurrentPage('privacy');
+                                }}
+                                style={{
+                                    color: darkMode 
+                                        ? (currentPage === 'privacy' ? 'white' : 'rgba(255, 255, 255, 0.7)')
+                                        : (currentPage === 'privacy' ? '#1a1a2e' : 'rgba(0, 0, 0, 0.7)'),
+                                    textDecoration: 'none',
+                                    fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+                                    fontWeight: currentPage === 'privacy' ? '600' : '400',
+                                    transition: 'all 0.3s ease',
+                                    borderBottom: currentPage === 'privacy' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                    paddingBottom: '5px'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.color = darkMode ? 'white' : '#1a1a2e';
+                                }}
+                                onMouseOut={(e) => {
+                                    if (currentPage !== 'privacy') {
+                                        e.target.style.color = darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+                                    }
+                                }}
+                            >
+                                {t('privacy')}
+                            </a>
+                            
+                            {/* Language Switcher */}
+                            <div style={{
+                                display: 'flex',
+                                gap: '8px',
+                                marginLeft: '10px'
+                            }}>
+                                {['de', 'en', 'fr', 'sq'].map((lang) => (
+                                    <button
+                                        key={lang}
+                                        onClick={() => changeLanguage(lang)}
+                                        style={{
+                                            background: language === lang 
+                                                ? (darkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)')
+                                                : 'transparent',
+                                            color: darkMode ? 'white' : '#1a1a2e',
+                                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid rgba(0, 0, 0, 0.3)',
+                                            borderRadius: '5px',
+                                            padding: '5px 10px',
+                                            cursor: 'pointer',
+                                            fontSize: 'clamp(0.75rem, 2vw, 0.9rem)',
+                                            fontWeight: language === lang ? '600' : '400',
+                                            transition: 'all 0.3s ease',
+                                            textTransform: 'uppercase'
+                                        }}
+                                        onMouseOver={(e) => {
+                                            e.target.style.background = darkMode ? 'rgba(255, 255, 255, 0.25)' : 'rgba(0, 0, 0, 0.25)';
+                                        }}
+                                        onMouseOut={(e) => {
+                                            if (language !== lang) {
+                                                e.target.style.background = 'transparent';
+                                            } else {
+                                                e.target.style.background = darkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)';
+                                            }
+                                        }}
+                                    >
+                                        {lang}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Mobile Slide-out Menu */}
+                        {mobileMenuOpen && (
+                            <div 
+                                style={{
+                                    position: 'fixed',
+                                    top: 0,
+                                    right: 0,
+                                    width: '70%',
+                                    maxWidth: '300px',
+                                    height: '100vh',
+                                    background: darkMode ? 'rgba(10, 10, 10, 0.98)' : 'rgba(232, 238, 242, 0.98)',
+                                    backdropFilter: 'blur(20px)',
+                                    zIndex: 1000,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    padding: '80px 30px 30px 30px',
+                                    gap: '25px',
+                                    animation: 'slideInRight 0.3s ease-out',
+                                    boxShadow: '-5px 0 20px rgba(0,0,0,0.3)'
+                                }}
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <a 
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setCurrentPage('home');
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    style={{
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        textDecoration: 'none',
+                                        fontSize: '1.3rem',
+                                        fontWeight: currentPage === 'home' ? '600' : '400',
+                                        borderBottom: currentPage === 'home' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                        paddingBottom: '10px'
+                                    }}
+                                >
+                                    {t('home')}
+                                </a>
+                                <a 
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setCurrentPage('contact');
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    style={{
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        textDecoration: 'none',
+                                        fontSize: '1.3rem',
+                                        fontWeight: currentPage === 'contact' ? '600' : '400',
+                                        borderBottom: currentPage === 'contact' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                        paddingBottom: '10px'
+                                    }}
+                                >
+                                    {t('contact')}
+                                </a>
+                                <a 
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setCurrentPage('imprint');
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    style={{
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        textDecoration: 'none',
+                                        fontSize: '1.3rem',
+                                        fontWeight: currentPage === 'imprint' ? '600' : '400',
+                                        borderBottom: currentPage === 'imprint' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                        paddingBottom: '10px'
+                                    }}
+                                >
+                                    {t('imprint')}
+                                </a>
+                                <a 
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setCurrentPage('privacy');
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    style={{
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        textDecoration: 'none',
+                                        fontSize: '1.3rem',
+                                        fontWeight: currentPage === 'privacy' ? '600' : '400',
+                                        borderBottom: currentPage === 'privacy' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                        paddingBottom: '10px'
+                                    }}
+                                >
+                                    {t('privacy')}
+                                </a>
+                                
+                                {/* Language Switcher in Mobile Menu */}
+                                <div style={{
+                                    display: 'flex',
+                                    gap: '10px',
+                                    marginTop: '20px',
+                                    paddingTop: '20px',
+                                    borderTop: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)'
+                                }}>
+                                    {['de', 'en', 'fr', 'sq'].map((lang) => (
+                                        <button
+                                            key={lang}
+                                            onClick={() => changeLanguage(lang)}
+                                            style={{
+                                                background: language === lang 
+                                                    ? (darkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)')
+                                                    : 'transparent',
+                                                color: darkMode ? 'white' : '#1a1a2e',
+                                                border: darkMode ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid rgba(0, 0, 0, 0.3)',
+                                                borderRadius: '5px',
+                                                padding: '8px 15px',
+                                                cursor: 'pointer',
+                                                fontSize: '1rem',
+                                                fontWeight: language === lang ? '600' : '400',
+                                                transition: 'all 0.3s ease',
+                                                textTransform: 'uppercase'
+                                            }}
+                                        >
+                                            {lang}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Overlay when mobile menu is open */}
+                        {mobileMenuOpen && (
+                            <div
+                                onClick={() => setMobileMenuOpen(false)}
+                                style={{
+                                    position: 'fixed',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100vh',
+                                    background: 'rgba(0, 0, 0, 0.5)',
+                                    zIndex: 999,
+                                    animation: 'fadeIn 0.3s ease-out'
+                                }}
+                            />
+                        )}
+                    </nav>
+
+                    {/* Main content */}
+                    <div style={{
+                        flex: 1,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        position: 'relative'
+                    }}>
+                    {currentPage === 'home' ? (
+                    <div style={{
+                        textAlign: 'center',
+                        zIndex: 1,
+                        animation: 'fadeIn 1s ease-in'
+                    }}>
+                        <h1 style={{
+                            fontSize: 'clamp(2rem, 6vw, 4rem)',
+                            fontWeight: '700',
+                            color: darkMode ? 'white' : '#1a1a2e',
+                            textShadow: darkMode ? '0 10px 30px rgba(0,0,0,0.3)' : '0 10px 30px rgba(0,0,0,0.1)',
+                            marginBottom: '20px',
+                            letterSpacing: '2px'
+                        }}>
+                            {t('comingSoon')}{dots}
+                        </h1>
+                        <p style={{
+                            fontSize: 'clamp(1rem, 3vw, 1.5rem)',
+                            color: darkMode ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.8)',
+                            textShadow: darkMode ? '0 2px 10px rgba(0,0,0,0.2)' : '0 2px 10px rgba(0,0,0,0.05)'
+                        }}>
+                            {t('somethingGreat')}
+                        </p>
+                    </div>
+                    ) : currentPage === 'contact' ? (
+                    <div style={{
+                        textAlign: 'center',
+                        zIndex: 1,
+                        animation: 'fadeIn 1s ease-in',
+                        maxWidth: '900px',
+                        padding: 'clamp(20px, 5vw, 40px)',
+                        overflowY: 'auto',
+                        maxHeight: '80vh',
+                        width: '90%'
+                    }}>
+                        <h1 style={{
+                            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                            fontWeight: '700',
+                            color: darkMode ? 'white' : '#1a1a2e',
+                            textShadow: darkMode ? '0 10px 30px rgba(0,0,0,0.3)' : '0 10px 30px rgba(0,0,0,0.1)',
+                            marginBottom: '15px',
+                            letterSpacing: '2px'
+                        }}>
+                            {t('getInTouch')}
+                        </h1>
+                        <p style={{
+                            fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+                            color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.7)',
+                            marginBottom: '30px'
+                        }}>
+                            {t('contactIntro')}
+                        </p>
+
+                        {/* Contact Form */}
+                        {formServiceDown && (
+                            <div style={{
+                                background: 'rgba(255, 80, 80, 0.08)',
+                                border: '1px solid rgba(255,80,80,0.18)',
+                                color: darkMode ? 'rgba(255,200,200,1)' : 'rgba(120,20,20,1)',
+                                padding: '16px 20px',
+                                borderRadius: '10px',
+                                marginBottom: '20px',
+                                textAlign: 'center',
+                                fontSize: 'clamp(0.95rem, 2vw, 1.05rem)'
+                            }} role="alert">
+                                <p style={{ margin: 0, fontWeight: 500, lineHeight: '1.6' }}>
+                                    {formNotices[language]}{' '}
+                                    <a 
+                                        href="mailto:cekaj.riart@outlook.com" 
+                                        style={{ 
+                                            color: '#667eea', 
+                                            textDecoration: 'underline',
+                                            fontWeight: 600
+                                        }}
+                                    >
+                                        cekaj.riart@outlook.com
+                                    </a>
+                                </p>
+                            </div>
+                        )}
+                        <form 
+                            action="https://formsubmit.co/cekaj.riart@outlook.com"
+                            method="POST"
+                            style={{
+                            background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '15px',
+                            padding: 'clamp(25px, 5vw, 40px)',
+                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
+                            marginBottom: '30px'
+                        }}>
+                            {/* FormSubmit Configuration */}
+                            <input type="hidden" name="_subject" value="Neue Kontaktanfrage von RBC Excellence Website" />
+                            <input type="hidden" name="_captcha" value="false" />
+                            <input type="hidden" name="_next" value={window.location.href} />
+                            <input type="text" name="_honey" style={{display: 'none'}} />
+
+                            <div style={{ marginBottom: '20px', textAlign: 'left' }}>
+                                <label style={{
+                                    display: 'block',
+                                    marginBottom: '8px',
+                                    color: darkMode ? 'white' : '#1a1a2e',
+                                    fontWeight: '600',
+                                    fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                }}>
+                                    {t('yourName')} *
+                                </label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    style={{
+                                        width: '100%',
+                                        padding: '12px 15px',
+                                        borderRadius: '8px',
+                                        border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                        background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                        outline: 'none',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onFocus={(e) => {
+                                        e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                        e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                    }}
+                                    onBlur={(e) => {
+                                        e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                        e.target.style.boxShadow = 'none';
+                                    }}
+                                />
+                            </div>
+
+                            <div style={{ marginBottom: '20px', textAlign: 'left' }}>
+                                <label style={{
+                                    display: 'block',
+                                    marginBottom: '8px',
+                                    color: darkMode ? 'white' : '#1a1a2e',
+                                    fontWeight: '600',
+                                    fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                }}>
+                                    {t('yourEmail')} *
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    style={{
+                                        width: '100%',
+                                        padding: '12px 15px',
+                                        borderRadius: '8px',
+                                        border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                        background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                        outline: 'none',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onFocus={(e) => {
+                                        e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                        e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                    }}
+                                    onBlur={(e) => {
+                                        e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                        e.target.style.boxShadow = 'none';
+                                    }}
+                                />
+                            </div>
+
+                            <div style={{ marginBottom: '20px', textAlign: 'left' }}>
+                                <label style={{
+                                    display: 'block',
+                                    marginBottom: '8px',
+                                    color: darkMode ? 'white' : '#1a1a2e',
+                                    fontWeight: '600',
+                                    fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                }}>
+                                    {t('yourMessage')} *
+                                </label>
+                                <textarea
+                                    name="message"
+                                    required
+                                    rows="5"
+                                    style={{
+                                        width: '100%',
+                                        padding: '12px 15px',
+                                        borderRadius: '8px',
+                                        border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                        background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                        outline: 'none',
+                                        transition: 'all 0.3s ease',
+                                        resize: 'vertical',
+                                        fontFamily: 'inherit'
+                                    }}
+                                    onFocus={(e) => {
+                                        e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                        e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                    }}
+                                    onBlur={(e) => {
+                                        e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                        e.target.style.boxShadow = 'none';
+                                    }}
+                                />
+                            </div>
+
+                            <button
+                                type="submit"
+                                style={{
+                                    width: '100%',
+                                    padding: '15px 30px',
+                                    background: '#667eea',
+                                    color: 'white',
+                                    border: 'none',
+                                    borderRadius: '8px',
+                                    fontSize: 'clamp(1rem, 2.5vw, 1.1rem)',
+                                    fontWeight: '600',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.3s ease',
+                                    marginTop: '10px'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.background = '#5568d3';
+                                }}
+                                onMouseOut={(e) => {
+                                    e.target.style.background = '#667eea';
+                                }}
+                            >
+                                {t('sendMessage')}
+                            </button>
+                        </form>
+
+                        {/* Direct Contact Info */}
+                        <div style={{
+                            textAlign: 'left',
+                            fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
+                            color: darkMode ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.8)',
+                            lineHeight: '1.8'
+                        }}>
+                            <h3 style={{ 
+                                color: darkMode ? 'white' : '#1a1a2e', 
+                                marginBottom: '15px', 
+                                fontSize: 'clamp(1.1rem, 2.5vw, 1.3rem)',
+                                textAlign: 'center'
+                            }}>
+                                {t('orContact')}
+                            </h3>
+                            
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginBottom: '30px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <span style={{ fontSize: '1.5rem' }}>📧</span>
+                                    <div>
+                                        <strong>{t('email')}:</strong>{' '}
+                                        <a 
+                                            href="mailto:cekaj.riart@outlook.com"
+                                            style={{ color: darkMode ? '#667eea' : '#5568d3', textDecoration: 'none' }}
+                                        >
+                                            cekaj.riart@outlook.com
+                                        </a>
+                                    </div>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <span style={{ fontSize: '1.5rem' }}>📞</span>
+                                    <div>
+                                        <strong>{t('phone')}:</strong>{' '}
+                                        <a href="tel:+41786047499" style={{ color: darkMode ? '#667eea' : '#5568d3', textDecoration: 'none' }}>
+                                            +41 78 604 74 99
+                                        </a>
+                                    </div>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <span style={{ fontSize: '1.5rem' }}>📍</span>
+                                    <div>
+                                        <strong>{t('address')}:</strong> 8400 Winterthur, {t('switzerland')}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Social Media */}
+                            <div style={{ textAlign: 'center' }}>
+                                <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '15px', fontSize: '1.2rem' }}>
+                                    {t('followUs')}
+                                </h3>
+                                <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                        <i className="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/rbcexcellence" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                        <i className="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://twitter.com/rbcexcellence" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                        <i className="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/rbc-excellence-b412b8396" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                        <i className="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@rbcexcellence" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                        <i className="fab fa-tiktok"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    ) : currentPage === 'imprint' ? (
+                    <div style={{
+                        textAlign: 'center',
+                        zIndex: 1,
+                        animation: 'fadeIn 1s ease-in',
+                        maxWidth: '800px',
+                        padding: 'clamp(20px, 5vw, 40px)',
+                        overflowY: 'auto',
+                        maxHeight: '75vh',
+                        width: '90%'
+                    }}>
+                        <h1 style={{
+                            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                            fontWeight: '700',
+                            color: darkMode ? 'white' : '#1a1a2e',
+                            textShadow: darkMode ? '0 10px 30px rgba(0,0,0,0.3)' : '0 10px 30px rgba(0,0,0,0.1)',
+                            marginBottom: '30px',
+                            letterSpacing: '2px'
+                        }}>
+                            {t('imprintTitle')}
+                        </h1>
+                        <div style={{
+                            fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                            color: darkMode ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.8)',
+                            textShadow: darkMode ? '0 2px 10px rgba(0,0,0,0.2)' : '0 2px 10px rgba(0,0,0,0.05)',
+                            lineHeight: '1.8',
+                            textAlign: 'left'
+                        }}>
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem' }}>{t('contactAddress')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                RBC Excellence<br/>
+                                {/* Musterstrasse 123<br/> */}
+                                8400 Winterthur<br/>
+                                {t('switzerland')}
+                            </p>
+                            <p style={{ marginBottom: '20px' }}>
+                                <strong>{t('representatives')}</strong><br/>
+                                {t('ceo')}
+                            </p>
+                            <p style={{ marginBottom: '20px' }}>
+                                <strong>{t('contact')}:</strong><br/>
+                                {t('phone')}: +41 78 604 74 99<br/>
+                                {t('email')}: cekaj.riart@outlook.ch
+                            </p>
+                            {/* <p style={{ marginBottom: '20px' }}>
+                                <strong>Handelsregistereintrag:</strong><br/>
+                                Eingetragen im Handelsregister des Kantons Zürich<br/>
+                                Handelsregister-Nummer: CHE-123.456.789<br/>
+                                UID: CHE-123.456.789 MWST
+                            </p> */}
+                            <p style={{ marginBottom: '20px' }}>
+                                <strong>{t('disclaimer')}</strong><br/>
+                                {t('disclaimerText')}
+                            </p>
+                            <p style={{ marginBottom: '20px' }}>
+                                <strong>{t('linkLiability')}</strong><br/>
+                                {t('linkLiabilityText')}
+                            </p>
+                            <p style={{ marginBottom: '20px' }}>
+                                <strong>{t('copyright')}</strong><br/>
+                                {t('copyrightText')}
+                            </p>
+                        </div>
+                    </div>
+                    ) : currentPage === 'privacy' ? (
+                    <div style={{
+                        textAlign: 'center',
+                        zIndex: 1,
+                        animation: 'fadeIn 1s ease-in',
+                        maxWidth: '800px',
+                        padding: 'clamp(20px, 5vw, 40px)',
+                        overflowY: 'auto',
+                        maxHeight: '75vh',
+                        width: '90%'
+                    }}>
+                        <h1 style={{
+                            fontSize: 'clamp(1.5rem, 5vw, 3.5rem)',
+                            fontWeight: '700',
+                            color: darkMode ? 'white' : '#1a1a2e',
+                            textShadow: darkMode ? '0 10px 30px rgba(0,0,0,0.3)' : '0 10px 30px rgba(0,0,0,0.1)',
+                            marginBottom: '30px',
+                            letterSpacing: '1px',
+                            wordBreak: 'break-word',
+                            hyphens: 'auto'
+                        }}>
+                            {t('privacyTitle')}
+                        </h1>
+                        <div style={{
+                            fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                            color: darkMode ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.8)',
+                            textShadow: darkMode ? '0 2px 10px rgba(0,0,0,0.2)' : '0 2px 10px rgba(0,0,0,0.05)',
+                            lineHeight: '1.8',
+                            textAlign: 'left'
+                        }}>
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem' }}>{t('contactAddress')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t('privacyIntro')}
+                            </p>
+                            
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem', marginTop: '25px' }}>{t('responsible')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t('responsibleText')}<br/><br/>
+                                <strong>RBC Excellence</strong><br/>
+                                {/* Musterstrasse 123<br/> */}
+                                8400 Winterthur<br/>
+                                {t('switzerland')}<br/><br/>
+                                {t('email')}: cekaj.riart@outlook.com<br/>
+                                {t('phone')}: +41 78 604 74 99
+                            </p>
+                            
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem', marginTop: '25px' }}>{t('dataProcessing')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t('dataProcessingText')}
+                            </p>
+                            
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem', marginTop: '25px' }}>{t('serverLogs')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t('serverLogsText')}
+                            </p>
+                            
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem', marginTop: '25px' }}>{t('yourRights')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t('yourRightsText')}
+                            </p>
+                            
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem', marginTop: '25px' }}>{t('sslEncryption')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t('sslEncryptionText')}
+                            </p>
+                            
+                            <h3 style={{ color: darkMode ? 'white' : '#1a1a2e', marginBottom: '10px', fontSize: '1.2rem', marginTop: '25px' }}>{t('dataPortability')}</h3>
+                            <p style={{ marginBottom: '20px' }}>
+                                {t('dataPortabilityText')}
+                            </p>
+                        </div>
+                    </div>
+                    ) : null}
+                    </div>
+
+                    {/* Cookie Banner */}
+                    {showCookieBanner && (
+                        <div style={{
+                            position: 'fixed',
+                            bottom: '0',
+                            left: '0',
+                            right: '0',
+                            background: 'rgba(0, 0, 0, 0.95)',
+                            backdropFilter: 'blur(10px)',
+                            padding: '20px',
+                            zIndex: 1000,
+                            borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+                            animation: 'slideUp 0.5s ease-out'
+                        }}>
+                            <div style={{
+                                maxWidth: '1200px',
+                                margin: '0 auto',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
+                                gap: '20px',
+                                flexWrap: 'wrap'
+                            }}>
+                                <div style={{
+                                    flex: '1',
+                                    minWidth: '300px'
+                                }}>
+                                    <p style={{
+                                        color: 'white',
+                                        fontSize: '0.95rem',
+                                        lineHeight: '1.5',
+                                        margin: 0
+                                    }}>
+                                        🍪 {t('cookieText')}{' '}
+                                        <a 
+                                            href="#" 
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                setCurrentPage('privacy');
+                                            }}
+                                            style={{
+                                                color: '#667eea',
+                                                textDecoration: 'underline'
+                                            }}
+                                        >
+                                            {t('privacyPolicy')}
+                                        </a>.
+                                    </p>
+                                </div>
+                                <div style={{
+                                    display: 'flex',
+                                    gap: '10px',
+                                    flexWrap: 'wrap'
+                                }}>
+                                    <button
+                                        onClick={declineCookies}
+                                        style={{
+                                            padding: '10px 20px',
+                                            background: 'transparent',
+                                            color: 'white',
+                                            border: '1px solid rgba(255, 255, 255, 0.3)',
+                                            borderRadius: '5px',
+                                            cursor: 'pointer',
+                                            fontSize: '0.9rem',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseOver={(e) => {
+                                            e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+                                        }}
+                                        onMouseOut={(e) => {
+                                            e.target.style.background = 'transparent';
+                                        }}
+                                    >
+                                        {t('cookieDecline')}
+                                    </button>
+                                    <button
+                                        onClick={acceptCookies}
+                                        style={{
+                                            padding: '10px 30px',
+                                            background: '#667eea',
+                                            color: 'white',
+                                            border: 'none',
+                                            borderRadius: '5px',
+                                            cursor: 'pointer',
+                                            fontSize: '0.9rem',
+                                            fontWeight: '600',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseOver={(e) => {
+                                            e.target.style.background = '#5568d3';
+                                        }}
+                                        onMouseOut={(e) => {
+                                            e.target.style.background = '#667eea';
+                                        }}
+                                    >
+                                        {t('cookieAccept')}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Footer */}
+                    <div style={{
+                        position: 'absolute',
+                        bottom: '30px',
+                        color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.6)',
+                        fontSize: '14px',
+                        zIndex: 1
+                    }}>
+                        {t('footerText')}
+                    </div>
+
+                    {/* Dark Mode Toggle - Bottom Right */}
+                    <button
+                        onClick={toggleDarkMode}
+                        style={{
+                            position: 'fixed',
+                            bottom: '20px',
+                            right: '20px',
+                            background: darkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)',
+                            border: darkMode ? '2px solid rgba(255, 255, 255, 0.3)' : '2px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '50%',
+                            width: 'clamp(45px, 12vw, 55px)',
+                            height: 'clamp(45px, 12vw, 55px)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            transition: 'all 0.3s ease',
+                            fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                            zIndex: 1000,
+                            backdropFilter: 'blur(10px)',
+                            boxShadow: darkMode ? '0 4px 15px rgba(255, 255, 255, 0.1)' : '0 4px 15px rgba(0, 0, 0, 0.2)'
+                        }}
+                        onMouseOver={(e) => {
+                            e.currentTarget.style.background = darkMode ? 'rgba(255, 255, 255, 0.25)' : 'rgba(0, 0, 0, 0.25)';
+                            e.currentTarget.style.transform = 'scale(1.1) rotate(20deg)';
+                        }}
+                        onMouseOut={(e) => {
+                            e.currentTarget.style.background = darkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)';
+                            e.currentTarget.style.transform = 'scale(1) rotate(0deg)';
+                        }}
+                        title={darkMode ? 'Light Mode aktivieren' : 'Dark Mode aktivieren'}
+                    >
+                        {darkMode ? '☀️' : '🌙'}
+                    </button>
+
+                    <style>{`
+                        @keyframes float {
+                            0%, 100% {
+                                transform: translateY(0px);
+                            }
+                            50% {
+                                transform: translateY(-30px);
+                            }
+                        }
+
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(20px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        @keyframes slideUp {
+                            from {
+                                transform: translateY(100%);
+                                opacity: 0;
+                            }
+                            to {
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        @keyframes slideInRight {
+                            from {
+                                transform: translateX(100%);
+                                opacity: 0;
+                            }
+                            to {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        @keyframes spin {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        /* Mobile Menu Display */
+                        @media (max-width: 768px) {
+                            .hamburger-menu {
+                                display: block !important;
+                            }
+                            .desktop-nav {
+                                display: none !important;
+                            }
+                        }
+
+                        @media (min-width: 769px) {
+                            .hamburger-menu {
+                                display: none !important;
+                            }
+                        }
+                    `}</style>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<ComingSoon />);
+    </script>
+</body>
+</html>
