@@ -678,9 +678,9 @@
                 if (savedMode !== null) {
                     setDarkMode(savedMode === 'true');
                 } else {
-                    // Set default to dark mode on first visit
-                    setDarkMode(true);
-                    localStorage.setItem('darkMode', 'true');
+                    // Set default to light mode on first visit
+                    setDarkMode(false);
+                    localStorage.setItem('darkMode', 'false');
                 }
                 
                 // Auto-detect browser language
