@@ -7,7 +7,7 @@
     <meta name="keywords" content="RBC Excellence, Coming Soon, Innovation, Excellence">
     <meta name="author" content="RBC Excellence">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com data:; img-src 'self' data:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
-    <title>Coming Soon - RBC Excellence</title>
+    <title>RBC Excellence - Webdesign & Frontend Entwicklung</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -40,11 +40,69 @@
         const translations = {
             de: {
                 home: 'Home',
+                services: 'Leistungen',
+                pricing: 'Preise',
                 contact: 'Kontakt',
                 imprint: 'Impressum',
                 privacy: 'Datenschutz',
-                comingSoon: 'Coming Soon',
-                somethingGreat: 'Etwas Grossartiges ist in Vorbereitung',
+                // Hero Section
+                heroTitle: 'Professionelle Websites',
+                heroSubtitle: 'Moderne Frontend-Entwicklung für Ihr Business',
+                heroDescription: 'Wir erstellen massgeschneiderte Frontend-Websites - schnell, sicher und perfekt für Ihre Bedürfnisse.',
+                getStarted: 'Jetzt starten',
+                learnMore: 'Mehr erfahren',
+                // Services Section
+                servicesTitle: 'Unsere Leistungen',
+                servicesSubtitle: 'Professionelle Frontend-Lösungen für jeden Bedarf',
+                landingPageTitle: 'Landing Pages',
+                landingPageDesc: 'Überzeugende One-Page-Websites für Produktlaunches, Events oder Kampagnen.',
+                businessWebsiteTitle: 'Business Websites',
+                businessWebsiteDesc: 'Mehrseitige Unternehmenswebsites mit professionellem Design und klarer Struktur.',
+                portfolioWebsiteTitle: 'Portfolio Websites',
+                portfolioWebsiteDesc: 'Kreative Präsentation Ihrer Arbeiten und Projekte.',
+                comingSoonPageTitle: 'Coming Soon Pages',
+                comingSoonPageDesc: 'Ansprechende Vorschauseiten für Ihre geplante Website.',
+                consultationTitle: 'Beratung & Konzept',
+                consultationDesc: 'Persönliche Beratung für Ihr Webprojekt - von der Idee bis zum Konzept.',
+                // Features
+                featuresTitle: 'Was Sie erhalten',
+                responsiveDesign: 'Responsive Design',
+                responsiveDesignDesc: 'Perfekte Darstellung auf allen Geräten',
+                fastLoading: 'Schnelle Ladezeiten',
+                fastLoadingDesc: 'Optimiert für maximale Performance',
+                seoOptimized: 'SEO-Grundlagen',
+                seoOptimizedDesc: 'Suchmaschinenfreundliche Struktur',
+                modernTech: 'Moderne Technologien',
+                modernTechDesc: 'HTML5, CSS3, JavaScript',
+                hostingSetup: 'Hosting-Setup',
+                hostingSetupDesc: 'Inklusive GitHub Pages Konfiguration',
+                maintenance: 'Wartungsfreundlich',
+                maintenanceDesc: 'Einfach zu aktualisieren und anzupassen',
+                // Pricing
+                pricingTitle: 'Transparente Preise',
+                pricingSubtitle: 'Faire Pakete für jedes Budget',
+                basic: 'Basis',
+                professional: 'Professionell',
+                premium: 'Premium',
+                from: 'ab',
+                chf: 'CHF',
+                perProject: 'pro Projekt',
+                selectPackage: 'Paket wählen',
+                mostPopular: 'Beliebteste',
+                // Package Features
+                pagesIncluded: 'Seiten inklusive',
+                responsive: 'Responsive Design',
+                seo: 'SEO-Grundlagen',
+                contactForm: 'Kontaktformular',
+                hosting: 'Hosting-Setup',
+                revisions: 'Überarbeitungen',
+                support: 'Support',
+                days: 'Tage',
+                unlimited: 'Unbegrenzt',
+                animationsBasic: 'Basis-Animationen',
+                animationsAdvanced: 'Erweiterte Animationen',
+                customFeatures: 'Individuelle Funktionen',
+                prioritySupport: 'Prioritäts-Support',
                 footerText: '© RBC Excellence - Alle Rechte vorbehalten',
                 email: 'E-Mail',
                 phone: 'Telefon',
@@ -55,14 +113,25 @@
                 contactForm: 'Kontaktformular',
                 contactIntro: 'Haben Sie Fragen oder möchten Sie mehr erfahren? Schreiben Sie uns eine Nachricht!',
                 yourName: 'Ihr Name',
+                yourFirstName: 'Vorname',
+                yourLastName: 'Nachname',
                 yourEmail: 'Ihre E-Mail',
+                yourPhone: 'Ihre Telefonnummer',
+                selectService: 'Gewünschte Leistung',
+                selectPackage: 'Gewünschtes Paket',
                 yourMessage: 'Ihre Nachricht',
+                serviceLandingPage: 'Landing Page',
+                serviceBusinessWebsite: 'Business Website',
+                servicePortfolio: 'Portfolio Website',
+                serviceComingSoon: 'Coming Soon Page',
+                serviceOther: 'Andere / Beratung',
                 sendMessage: 'Nachricht senden',
                 sending: 'Wird gesendet...',
                 messageSent: 'Nachricht erfolgreich gesendet!',
                 messageError: 'Fehler beim Senden. Bitte versuchen Sie es erneut.',
                 nameRequired: 'Name ist erforderlich',
                 emailRequired: 'E-Mail ist erforderlich',
+                phoneOptional: '(optional)',
                 messageRequired: 'Nachricht ist erforderlich',
                 orContact: 'Unsere Kontaktdaten:',
                 getInTouch: 'Kontaktieren Sie uns',
@@ -96,11 +165,69 @@
             },
             en: {
                 home: 'Home',
+                services: 'Services',
+                pricing: 'Pricing',
                 contact: 'Contact',
                 imprint: 'Imprint',
                 privacy: 'Privacy',
-                comingSoon: 'Coming Soon',
-                somethingGreat: 'Something Great is in Preparation',
+                // Hero Section
+                heroTitle: 'Professional Websites',
+                heroSubtitle: 'Modern Frontend Development for Your Business',
+                heroDescription: 'We create custom frontend websites - fast, secure and perfect for your needs.',
+                getStarted: 'Get Started',
+                learnMore: 'Learn More',
+                // Services Section
+                servicesTitle: 'Our Services',
+                servicesSubtitle: 'Professional Frontend Solutions for Every Need',
+                landingPageTitle: 'Landing Pages',
+                landingPageDesc: 'Compelling one-page websites for product launches, events or campaigns.',
+                businessWebsiteTitle: 'Business Websites',
+                businessWebsiteDesc: 'Multi-page corporate websites with professional design and clear structure.',
+                portfolioWebsiteTitle: 'Portfolio Websites',
+                portfolioWebsiteDesc: 'Creative presentation of your work and projects.',
+                comingSoonPageTitle: 'Coming Soon Pages',
+                comingSoonPageDesc: 'Engaging preview pages for your planned website.',
+                consultationTitle: 'Consultation & Concept',
+                consultationDesc: 'Personal consultation for your web project - from idea to concept.',
+                // Features
+                featuresTitle: 'What You Get',
+                responsiveDesign: 'Responsive Design',
+                responsiveDesignDesc: 'Perfect display on all devices',
+                fastLoading: 'Fast Loading Times',
+                fastLoadingDesc: 'Optimized for maximum performance',
+                seoOptimized: 'SEO Basics',
+                seoOptimizedDesc: 'Search engine friendly structure',
+                modernTech: 'Modern Technologies',
+                modernTechDesc: 'HTML5, CSS3, JavaScript',
+                hostingSetup: 'Hosting Setup',
+                hostingSetupDesc: 'Including GitHub Pages configuration',
+                maintenance: 'Easy Maintenance',
+                maintenanceDesc: 'Simple to update and customize',
+                // Pricing
+                pricingTitle: 'Transparent Pricing',
+                pricingSubtitle: 'Fair Packages for Every Budget',
+                basic: 'Basic',
+                professional: 'Professional',
+                premium: 'Premium',
+                from: 'from',
+                chf: 'CHF',
+                perProject: 'per project',
+                selectPackage: 'Select Package',
+                mostPopular: 'Most Popular',
+                // Package Features
+                pagesIncluded: 'Pages included',
+                responsive: 'Responsive Design',
+                seo: 'SEO Basics',
+                contactForm: 'Contact Form',
+                hosting: 'Hosting Setup',
+                revisions: 'Revisions',
+                support: 'Support',
+                days: 'days',
+                unlimited: 'Unlimited',
+                animationsBasic: 'Basic Animations',
+                animationsAdvanced: 'Advanced Animations',
+                customFeatures: 'Custom Features',
+                prioritySupport: 'Priority Support',
                 footerText: '© RBC Excellence - All Rights Reserved',
                 email: 'Email',
                 phone: 'Phone',
@@ -111,14 +238,25 @@
                 contactForm: 'Contact Form',
                 contactIntro: 'Have questions or want to learn more? Send us a message!',
                 yourName: 'Your Name',
+                yourFirstName: 'First Name',
+                yourLastName: 'Last Name',
                 yourEmail: 'Your Email',
+                yourPhone: 'Your Phone Number',
+                selectService: 'Desired Service',
+                selectPackage: 'Desired Package',
                 yourMessage: 'Your Message',
+                serviceLandingPage: 'Landing Page',
+                serviceBusinessWebsite: 'Business Website',
+                servicePortfolio: 'Portfolio Website',
+                serviceComingSoon: 'Coming Soon Page',
+                serviceOther: 'Other / Consultation',
                 sendMessage: 'Send Message',
                 sending: 'Sending...',
                 messageSent: 'Message sent successfully!',
                 messageError: 'Error sending message. Please try again.',
                 nameRequired: 'Name is required',
                 emailRequired: 'Email is required',
+                phoneOptional: '(optional)',
                 messageRequired: 'Message is required',
                 orContact: 'Our contact details:',
                 getInTouch: 'Get in Touch',
@@ -152,11 +290,69 @@
             },
             fr: {
                 home: 'Accueil',
+                services: 'Services',
+                pricing: 'Tarifs',
                 contact: 'Contact',
                 imprint: 'Mentions légales',
                 privacy: 'Confidentialité',
-                comingSoon: 'Bientôt disponible',
-                somethingGreat: 'Quelque chose de génial est en préparation',
+                // Hero Section
+                heroTitle: 'Sites Web Professionnels',
+                heroSubtitle: 'Développement Frontend Moderne pour Votre Entreprise',
+                heroDescription: 'Nous créons des sites web frontend sur mesure - rapides, sécurisés et parfaits pour vos besoins.',
+                getStarted: 'Commencer',
+                learnMore: 'En savoir plus',
+                // Services Section
+                servicesTitle: 'Nos Services',
+                servicesSubtitle: 'Solutions Frontend Professionnelles pour Tous les Besoins',
+                landingPageTitle: 'Landing Pages',
+                landingPageDesc: 'Pages web convaincantes pour lancements de produits, événements ou campagnes.',
+                businessWebsiteTitle: 'Sites Web d\'Entreprise',
+                businessWebsiteDesc: 'Sites web multi-pages avec design professionnel et structure claire.',
+                portfolioWebsiteTitle: 'Sites Web Portfolio',
+                portfolioWebsiteDesc: 'Présentation créative de vos travaux et projets.',
+                comingSoonPageTitle: 'Pages Bientôt Disponible',
+                comingSoonPageDesc: 'Pages de prévisualisation attrayantes pour votre site web planifié.',
+                consultationTitle: 'Conseil & Concept',
+                consultationDesc: 'Conseil personnalisé pour votre projet web - de l\'idée au concept.',
+                // Features
+                featuresTitle: 'Ce Que Vous Obtenez',
+                responsiveDesign: 'Design Responsive',
+                responsiveDesignDesc: 'Affichage parfait sur tous les appareils',
+                fastLoading: 'Chargement Rapide',
+                fastLoadingDesc: 'Optimisé pour une performance maximale',
+                seoOptimized: 'Bases SEO',
+                seoOptimizedDesc: 'Structure optimisée pour les moteurs de recherche',
+                modernTech: 'Technologies Modernes',
+                modernTechDesc: 'HTML5, CSS3, JavaScript',
+                hostingSetup: 'Configuration Hébergement',
+                hostingSetupDesc: 'Configuration GitHub Pages incluse',
+                maintenance: 'Maintenance Facile',
+                maintenanceDesc: 'Simple à mettre à jour et personnaliser',
+                // Pricing
+                pricingTitle: 'Tarifs Transparents',
+                pricingSubtitle: 'Forfaits Équitables pour Tous les Budgets',
+                basic: 'Basique',
+                professional: 'Professionnel',
+                premium: 'Premium',
+                from: 'à partir de',
+                chf: 'CHF',
+                perProject: 'par projet',
+                selectPackage: 'Choisir le forfait',
+                mostPopular: 'Le plus populaire',
+                // Package Features
+                pagesIncluded: 'Pages incluses',
+                responsive: 'Design Responsive',
+                seo: 'Bases SEO',
+                contactForm: 'Formulaire de contact',
+                hosting: 'Configuration hébergement',
+                revisions: 'Révisions',
+                support: 'Support',
+                days: 'jours',
+                unlimited: 'Illimité',
+                animationsBasic: 'Animations de base',
+                animationsAdvanced: 'Animations avancées',
+                customFeatures: 'Fonctionnalités personnalisées',
+                prioritySupport: 'Support prioritaire',
                 footerText: '© RBC Excellence - Tous droits réservés',
                 email: 'E-mail',
                 phone: 'Téléphone',
@@ -167,14 +363,25 @@
                 contactForm: 'Formulaire de contact',
                 contactIntro: 'Vous avez des questions ou souhaitez en savoir plus? Envoyez-nous un message!',
                 yourName: 'Votre nom',
+                yourFirstName: 'Prénom',
+                yourLastName: 'Nom',
                 yourEmail: 'Votre e-mail',
+                yourPhone: 'Votre numéro de téléphone',
+                selectService: 'Service souhaité',
+                selectPackage: 'Forfait souhaité',
                 yourMessage: 'Votre message',
+                serviceLandingPage: 'Landing Page',
+                serviceBusinessWebsite: 'Site Web d\'Entreprise',
+                servicePortfolio: 'Site Web Portfolio',
+                serviceComingSoon: 'Page Bientôt Disponible',
+                serviceOther: 'Autre / Consultation',
                 sendMessage: 'Envoyer le message',
                 sending: 'Envoi en cours...',
                 messageSent: 'Message envoyé avec succès!',
                 messageError: 'Erreur lors de l\'envoi. Veuillez réessayer.',
                 nameRequired: 'Le nom est requis',
                 emailRequired: 'L\'e-mail est requis',
+                phoneOptional: '(optionnel)',
                 messageRequired: 'Le message est requis',
                 orContact: 'Nos coordonnées:',
                 getInTouch: 'Contactez-nous',
@@ -208,11 +415,69 @@
             },
             sq: {
                 home: 'Ballina',
+                services: 'Shërbimet',
+                pricing: 'Çmimet',
                 contact: 'Kontakt',
                 imprint: 'Impressum',
                 privacy: 'Privatësia',
-                comingSoon: 'Së Shpejti',
-                somethingGreat: 'Diçka e Madhe është në Përgatitje',
+                // Hero Section
+                heroTitle: 'Faqe Interneti Profesionale',
+                heroSubtitle: 'Zhvillim Modern Frontend për Biznesin Tuaj',
+                heroDescription: 'Ne krijojmë faqe interneti frontend të personalizuara - të shpejta, të sigurta dhe të përsosura për nevojat tuaja.',
+                getStarted: 'Filloni Tani',
+                learnMore: 'Mësoni Më Shumë',
+                // Services Section
+                servicesTitle: 'Shërbimet Tona',
+                servicesSubtitle: 'Zgjidhje Profesionale Frontend për Çdo Nevojë',
+                landingPageTitle: 'Landing Pages',
+                landingPageDesc: 'Faqe interneti bindëse për lansime produktesh, evente ose fushata.',
+                businessWebsiteTitle: 'Faqe Biznesi',
+                businessWebsiteDesc: 'Faqe shumë-faqesh për kompani me dizajn profesional dhe strukturë të qartë.',
+                portfolioWebsiteTitle: 'Faqe Portfolio',
+                portfolioWebsiteDesc: 'Prezantim kreativ i punëve dhe projekteve tuaja.',
+                comingSoonPageTitle: 'Faqe Së Shpejti',
+                comingSoonPageDesc: 'Faqe tërheqëse parapamjeje për faqen tuaj të planifikuar.',
+                consultationTitle: 'Konsultim & Koncept',
+                consultationDesc: 'Konsultim personal për projektin tuaj web - nga ideja deri te koncepti.',
+                // Features
+                featuresTitle: 'Çfarë Merrni',
+                responsiveDesign: 'Dizajn Responsive',
+                responsiveDesignDesc: 'Shfaqje e përsosur në të gjitha pajisjet',
+                fastLoading: 'Ngarkimi i Shpejtë',
+                fastLoadingDesc: 'Optimizuar për performancë maksimale',
+                seoOptimized: 'Bazat e SEO',
+                seoOptimizedDesc: 'Strukturë miqësore për motorët e kërkimit',
+                modernTech: 'Teknologji Moderne',
+                modernTechDesc: 'HTML5, CSS3, JavaScript',
+                hostingSetup: 'Konfigurimi i Hostingut',
+                hostingSetupDesc: 'Përfshirë konfigurimin e GitHub Pages',
+                maintenance: 'Mirëmbajtje e Lehtë',
+                maintenanceDesc: 'E thjeshtë për t\'u përditësuar dhe personalizuar',
+                // Pricing
+                pricingTitle: 'Çmime Transparente',
+                pricingSubtitle: 'Paketa të Drejta për Çdo Buxhet',
+                basic: 'Bazë',
+                professional: 'Profesional',
+                premium: 'Premium',
+                from: 'nga',
+                chf: 'CHF',
+                perProject: 'për projekt',
+                selectPackage: 'Zgjidhni Paketën',
+                mostPopular: 'Më e Popullarizuara',
+                // Package Features
+                pagesIncluded: 'Faqe të përfshira',
+                responsive: 'Dizajn Responsive',
+                seo: 'Bazat e SEO',
+                contactForm: 'Formulari i kontaktit',
+                hosting: 'Konfigurimi i hostingut',
+                revisions: 'Rishikime',
+                support: 'Mbështetje',
+                days: 'ditë',
+                unlimited: 'Pa kufi',
+                animationsBasic: 'Animacione bazë',
+                animationsAdvanced: 'Animacione të avancuara',
+                customFeatures: 'Veçori të personalizuara',
+                prioritySupport: 'Mbështetje prioritare',
                 footerText: '© RBC Excellence - Të gjitha të drejtat e rezervuara',
                 email: 'Email',
                 phone: 'Telefon',
@@ -223,8 +488,19 @@
                 contactForm: 'Formulari i Kontaktit',
                 contactIntro: 'Keni pyetje ose dëshironi të mësoni më shumë? Na dërgoni një mesazh!',
                 yourName: 'Emri juaj',
+                yourFirstName: 'Emri',
+                yourLastName: 'Mbiemri',
                 yourEmail: 'Email-i juaj',
+                yourPhone: 'Numri juaj i telefonit',
                 yourMessage: 'Mesazhi juaj',
+                selectService: 'Shërbimi i dëshiruar',
+                selectPackage: 'Paketa e dëshiruar',
+                serviceLandingPage: 'Landing Page',
+                serviceBusinessWebsite: 'Faqe Biznesi',
+                servicePortfolio: 'Faqe Portfolio',
+                serviceComingSoon: 'Faqe Së Shpejti',
+                serviceOther: 'Tjetër / Konsultim',
+                phoneOptional: '(opsionale)',
                 sendMessage: 'Dërgo Mesazhin',
                 sending: 'Duke dërguar...',
                 messageSent: 'Mesazhi u dërgua me sukses!',
@@ -386,7 +662,7 @@
 
             // Swipe gesture handling
             const minSwipeDistance = 50;
-            const pages = ['home', 'contact', 'imprint', 'privacy'];
+            const pages = ['home', 'services', 'pricing', 'contact', 'imprint', 'privacy'];
 
             const onTouchStart = (e) => {
                 setTouchEnd(null);
@@ -587,6 +863,62 @@
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
+                                    setCurrentPage('services');
+                                }}
+                                style={{
+                                    color: darkMode 
+                                        ? (currentPage === 'services' ? 'white' : 'rgba(255, 255, 255, 0.7)')
+                                        : (currentPage === 'services' ? '#1a1a2e' : 'rgba(0, 0, 0, 0.7)'),
+                                    textDecoration: 'none',
+                                    fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+                                    fontWeight: currentPage === 'services' ? '600' : '400',
+                                    transition: 'all 0.3s ease',
+                                    borderBottom: currentPage === 'services' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                    paddingBottom: '5px'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.color = darkMode ? 'white' : '#1a1a2e';
+                                }}
+                                onMouseOut={(e) => {
+                                    if (currentPage !== 'services') {
+                                        e.target.style.color = darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+                                    }
+                                }}
+                            >
+                                {t('services')}
+                            </a>
+                            <a 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setCurrentPage('pricing');
+                                }}
+                                style={{
+                                    color: darkMode 
+                                        ? (currentPage === 'pricing' ? 'white' : 'rgba(255, 255, 255, 0.7)')
+                                        : (currentPage === 'pricing' ? '#1a1a2e' : 'rgba(0, 0, 0, 0.7)'),
+                                    textDecoration: 'none',
+                                    fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+                                    fontWeight: currentPage === 'pricing' ? '600' : '400',
+                                    transition: 'all 0.3s ease',
+                                    borderBottom: currentPage === 'pricing' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                    paddingBottom: '5px'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.color = darkMode ? 'white' : '#1a1a2e';
+                                }}
+                                onMouseOut={(e) => {
+                                    if (currentPage !== 'pricing') {
+                                        e.target.style.color = darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+                                    }
+                                }}
+                            >
+                                {t('pricing')}
+                            </a>
+                            <a 
+                                href="#"
+                                onClick={(e) => {
+                                    e.preventDefault();
                                     setCurrentPage('contact');
                                 }}
                                 style={{
@@ -753,6 +1085,42 @@
                                     href="#"
                                     onClick={(e) => {
                                         e.preventDefault();
+                                        setCurrentPage('services');
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    style={{
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        textDecoration: 'none',
+                                        fontSize: '1.3rem',
+                                        fontWeight: currentPage === 'services' ? '600' : '400',
+                                        borderBottom: currentPage === 'services' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                        paddingBottom: '10px'
+                                    }}
+                                >
+                                    {t('services')}
+                                </a>
+                                <a 
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setCurrentPage('pricing');
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    style={{
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        textDecoration: 'none',
+                                        fontSize: '1.3rem',
+                                        fontWeight: currentPage === 'pricing' ? '600' : '400',
+                                        borderBottom: currentPage === 'pricing' ? (darkMode ? '2px solid white' : '2px solid #1a1a2e') : 'none',
+                                        paddingBottom: '10px'
+                                    }}
+                                >
+                                    {t('pricing')}
+                                </a>
+                                <a 
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
                                         setCurrentPage('contact');
                                         setMobileMenuOpen(false);
                                     }}
@@ -869,25 +1237,594 @@
                     <div style={{
                         textAlign: 'center',
                         zIndex: 1,
-                        animation: 'fadeIn 1s ease-in'
+                        animation: 'fadeIn 1s ease-in',
+                        maxWidth: '1200px',
+                        padding: 'clamp(40px, 5vw, 80px) clamp(20px, 5vw, 40px)',
+                        overflowY: 'auto',
+                        maxHeight: '85vh',
+                        width: '90%'
+                    }}>
+                        {/* Hero Section */}
+                        <div style={{ marginBottom: 'clamp(60px, 10vw, 100px)' }}>
+                            <h1 style={{
+                                fontSize: 'clamp(2.5rem, 7vw, 4.5rem)',
+                                fontWeight: '700',
+                                color: darkMode ? 'white' : '#1a1a2e',
+                                marginBottom: '20px',
+                                lineHeight: '1.2'
+                            }}>
+                                {t('heroTitle')}
+                            </h1>
+                            <p style={{
+                                fontSize: 'clamp(1.1rem, 3vw, 1.5rem)',
+                                color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.7)',
+                                marginBottom: '15px',
+                                fontWeight: '500'
+                            }}>
+                                {t('heroSubtitle')}
+                            </p>
+                            <p style={{
+                                fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
+                                color: darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.6)',
+                                marginBottom: '40px',
+                                maxWidth: '700px',
+                                margin: '0 auto 40px'
+                            }}>
+                                {t('heroDescription')}
+                            </p>
+                            {/* CTA Buttons */}
+                            <div style={{
+                                display: 'flex',
+                                gap: '20px',
+                                justifyContent: 'center',
+                                flexWrap: 'wrap'
+                            }}>
+                                <button
+                                    onClick={() => setCurrentPage('contact')}
+                                    style={{
+                                        padding: '15px 40px',
+                                        background: '#667eea',
+                                        color: 'white',
+                                        border: 'none',
+                                        borderRadius: '8px',
+                                        fontSize: 'clamp(1rem, 2.5vw, 1.1rem)',
+                                        fontWeight: '600',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease',
+                                        boxShadow: '0 4px 15px rgba(102, 126, 234, 0.3)'
+                                    }}
+                                    onMouseOver={(e) => {
+                                        e.target.style.background = '#5568d3';
+                                        e.target.style.transform = 'translateY(-2px)';
+                                        e.target.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.4)';
+                                    }}
+                                    onMouseOut={(e) => {
+                                        e.target.style.background = '#667eea';
+                                        e.target.style.transform = 'translateY(0)';
+                                        e.target.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.3)';
+                                    }}
+                                >
+                                    {t('getStarted')}
+                                </button>
+                                <button
+                                    onClick={() => setCurrentPage('services')}
+                                    style={{
+                                        padding: '15px 40px',
+                                        background: 'transparent',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        border: darkMode ? '2px solid rgba(255, 255, 255, 0.3)' : '2px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '8px',
+                                        fontSize: 'clamp(1rem, 2.5vw, 1.1rem)',
+                                        fontWeight: '600',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onMouseOver={(e) => {
+                                        e.target.style.background = darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)';
+                                        e.target.style.transform = 'translateY(-2px)';
+                                    }}
+                                    onMouseOut={(e) => {
+                                        e.target.style.background = 'transparent';
+                                        e.target.style.transform = 'translateY(0)';
+                                    }}
+                                >
+                                    {t('learnMore')}
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Features Grid */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                            gap: '30px',
+                            marginTop: '60px'
+                        }}>
+                            {[
+                                { icon: '📱', title: t('responsiveDesign'), desc: t('responsiveDesignDesc') },
+                                { icon: '⚡', title: t('fastLoading'), desc: t('fastLoadingDesc') },
+                                { icon: '🎯', title: t('seoOptimized'), desc: t('seoOptimizedDesc') },
+                                { icon: '💻', title: t('modernTech'), desc: t('modernTechDesc') },
+                                { icon: '🚀', title: t('hostingSetup'), desc: t('hostingSetupDesc') },
+                                { icon: '🔧', title: t('maintenance'), desc: t('maintenanceDesc') }
+                            ].map((feature, index) => (
+                                <div key={index} style={{
+                                    background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)',
+                                    padding: '30px 20px',
+                                    borderRadius: '15px',
+                                    border: darkMode ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
+                                    transition: 'all 0.3s ease',
+                                    cursor: 'default'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.currentTarget.style.transform = 'translateY(-5px)';
+                                    e.currentTarget.style.boxShadow = darkMode 
+                                        ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                                        : '0 10px 30px rgba(0, 0, 0, 0.1)';
+                                }}
+                                onMouseOut={(e) => {
+                                    e.currentTarget.style.transform = 'translateY(0)';
+                                    e.currentTarget.style.boxShadow = 'none';
+                                }}
+                                >
+                                    <div style={{ fontSize: '3rem', marginBottom: '15px' }}>{feature.icon}</div>
+                                    <h3 style={{
+                                        fontSize: '1.2rem',
+                                        fontWeight: '600',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        marginBottom: '10px'
+                                    }}>{feature.title}</h3>
+                                    <p style={{
+                                        fontSize: '0.95rem',
+                                        color: darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.6)',
+                                        lineHeight: '1.6'
+                                    }}>{feature.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    ) : currentPage === 'services' ? (
+                    <div style={{
+                        textAlign: 'center',
+                        zIndex: 1,
+                        animation: 'fadeIn 1s ease-in',
+                        maxWidth: '1200px',
+                        padding: 'clamp(40px, 5vw, 80px) clamp(20px, 5vw, 40px)',
+                        overflowY: 'auto',
+                        maxHeight: '85vh',
+                        width: '90%'
                     }}>
                         <h1 style={{
-                            fontSize: 'clamp(2rem, 6vw, 4rem)',
+                            fontSize: 'clamp(2.5rem, 6vw, 3.5rem)',
                             fontWeight: '700',
                             color: darkMode ? 'white' : '#1a1a2e',
-                            textShadow: darkMode ? '0 10px 30px rgba(0,0,0,0.3)' : '0 10px 30px rgba(0,0,0,0.1)',
-                            marginBottom: '20px',
-                            letterSpacing: '2px'
+                            marginBottom: '20px'
                         }}>
-                            {t('comingSoon')}{dots}
+                            {t('servicesTitle')}
                         </h1>
                         <p style={{
-                            fontSize: 'clamp(1rem, 3vw, 1.5rem)',
-                            color: darkMode ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.8)',
-                            textShadow: darkMode ? '0 2px 10px rgba(0,0,0,0.2)' : '0 2px 10px rgba(0,0,0,0.05)'
+                            fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+                            color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.7)',
+                            marginBottom: '60px'
                         }}>
-                            {t('somethingGreat')}
+                            {t('servicesSubtitle')}
                         </p>
+
+                        {/* Services Cards */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                            gap: '40px'
+                        }}>
+                            {[
+                                { title: t('landingPageTitle'), desc: t('landingPageDesc'), icon: '🎯', price: '800' },
+                                { title: t('businessWebsiteTitle'), desc: t('businessWebsiteDesc'), icon: '💼', price: '1500' },
+                                { title: t('portfolioWebsiteTitle'), desc: t('portfolioWebsiteDesc'), icon: '🎨', price: '1200' },
+                                { title: t('comingSoonPageTitle'), desc: t('comingSoonPageDesc'), icon: '🚀', price: '600' },
+                                { title: t('consultationTitle'), desc: t('consultationDesc'), icon: '💡', price: '150' }
+                            ].map((service, index) => (
+                                <div key={index} style={{
+                                    background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)',
+                                    padding: '40px 30px',
+                                    borderRadius: '20px',
+                                    border: darkMode ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
+                                    transition: 'all 0.3s ease',
+                                    textAlign: 'left'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.currentTarget.style.transform = 'translateY(-10px)';
+                                    e.currentTarget.style.boxShadow = darkMode 
+                                        ? '0 15px 40px rgba(0, 0, 0, 0.4)' 
+                                        : '0 15px 40px rgba(0, 0, 0, 0.15)';
+                                }}
+                                onMouseOut={(e) => {
+                                    e.currentTarget.style.transform = 'translateY(0)';
+                                    e.currentTarget.style.boxShadow = 'none';
+                                }}
+                                >
+                                    <div style={{ fontSize: '3.5rem', marginBottom: '20px' }}>{service.icon}</div>
+                                    <h3 style={{
+                                        fontSize: '1.5rem',
+                                        fontWeight: '600',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        marginBottom: '15px'
+                                    }}>{service.title}</h3>
+                                    <p style={{
+                                        fontSize: '1rem',
+                                        color: darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.6)',
+                                        lineHeight: '1.7',
+                                        marginBottom: '20px'
+                                    }}>{service.desc}</p>
+                                    <button
+                                        onClick={() => setCurrentPage('contact')}
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 24px',
+                                            background: '#667eea',
+                                            color: 'white',
+                                            border: 'none',
+                                            borderRadius: '8px',
+                                            fontSize: '1rem',
+                                            fontWeight: '600',
+                                            cursor: 'pointer',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseOver={(e) => {
+                                            e.target.style.background = '#5568d3';
+                                        }}
+                                        onMouseOut={(e) => {
+                                            e.target.style.background = '#667eea';
+                                        }}
+                                    >
+                                        {t('getStarted')}
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    ) : currentPage === 'pricing' ? (
+                    <div style={{
+                        textAlign: 'center',
+                        zIndex: 1,
+                        animation: 'fadeIn 1s ease-in',
+                        maxWidth: '1200px',
+                        padding: 'clamp(40px, 5vw, 80px) clamp(20px, 5vw, 40px)',
+                        overflowY: 'auto',
+                        maxHeight: '85vh',
+                        width: '90%'
+                    }}>
+                        <h1 style={{
+                            fontSize: 'clamp(2.5rem, 6vw, 3.5rem)',
+                            fontWeight: '700',
+                            color: darkMode ? 'white' : '#1a1a2e',
+                            marginBottom: '20px'
+                        }}>
+                            {t('pricingTitle')}
+                        </h1>
+                        <p style={{
+                            fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+                            color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.7)',
+                            marginBottom: '60px'
+                        }}>
+                            {t('pricingSubtitle')}
+                        </p>
+
+                        {/* Pricing Cards */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gap: '30px',
+                            alignItems: 'stretch'
+                        }}>
+                            {/* Basic Package */}
+                            <div style={{
+                                background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)',
+                                padding: '40px 30px',
+                                borderRadius: '20px',
+                                border: darkMode ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
+                                transition: 'all 0.3s ease',
+                                display: 'flex',
+                                flexDirection: 'column'
+                            }}
+                            onMouseOver={(e) => {
+                                e.currentTarget.style.transform = 'translateY(-5px)';
+                                e.currentTarget.style.boxShadow = darkMode 
+                                    ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                                    : '0 10px 30px rgba(0, 0, 0, 0.1)';
+                            }}
+                            onMouseOut={(e) => {
+                                e.currentTarget.style.transform = 'translateY(0)';
+                                e.currentTarget.style.boxShadow = 'none';
+                            }}
+                            >
+                                <h3 style={{
+                                    fontSize: '1.8rem',
+                                    fontWeight: '700',
+                                    color: darkMode ? 'white' : '#1a1a2e',
+                                    marginBottom: '15px'
+                                }}>{t('basic')}</h3>
+                                <div style={{
+                                    fontSize: '3rem',
+                                    fontWeight: '700',
+                                    color: '#667eea',
+                                    marginBottom: '10px'
+                                }}>
+                                    {t('from')}<br/>CHF 700
+                                </div>
+                                <p style={{
+                                    fontSize: '0.9rem',
+                                    color: darkMode ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.5)',
+                                    marginBottom: '30px'
+                                }}>{t('perProject')}</p>
+                                <ul style={{
+                                    textAlign: 'left',
+                                    listStyle: 'none',
+                                    padding: 0,
+                                    margin: '0 0 30px 0',
+                                    flex: 1
+                                }}>
+                                    {['1-3 ' + t('pagesIncluded'), '✓ ' + t('responsive'), '✓ ' + t('seo'), '✓ ' + t('contactForm'), '✓ ' + t('hosting'), '2 ' + t('revisions'), '30 ' + t('days') + ' ' + t('support')].map((feature, i) => (
+                                        <li key={i} style={{
+                                            padding: '10px 0',
+                                            borderBottom: darkMode ? '1px solid rgba(255,255,255,0.05)' : '1px solid rgba(0,0,0,0.05)',
+                                            color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.7)',
+                                            fontSize: '0.95rem'
+                                        }}>{feature}</li>
+                                    ))}
+                                </ul>
+                                <button
+                                    onClick={() => setCurrentPage('contact')}
+                                    style={{
+                                        width: '100%',
+                                        padding: '15px',
+                                        background: 'transparent',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        border: darkMode ? '2px solid rgba(255,255,255,0.3)' : '2px solid rgba(0,0,0,0.3)',
+                                        borderRadius: '8px',
+                                        fontSize: '1rem',
+                                        fontWeight: '600',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onMouseOver={(e) => {
+                                        e.target.style.background = darkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
+                                    }}
+                                    onMouseOut={(e) => {
+                                        e.target.style.background = 'transparent';
+                                    }}
+                                >
+                                    {t('selectPackage')}
+                                </button>
+                            </div>
+
+                            {/* Professional Package */}
+                            <div style={{
+                                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                padding: '40px 30px',
+                                borderRadius: '20px',
+                                border: '2px solid #667eea',
+                                transition: 'all 0.3s ease',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                position: 'relative',
+                                transform: 'scale(1.05)'
+                            }}
+                            onMouseOver={(e) => {
+                                e.currentTarget.style.transform = 'scale(1.08) translateY(-5px)';
+                                e.currentTarget.style.boxShadow = '0 15px 40px rgba(102, 126, 234, 0.4)';
+                            }}
+                            onMouseOut={(e) => {
+                                e.currentTarget.style.transform = 'scale(1.05) translateY(0)';
+                                e.currentTarget.style.boxShadow = 'none';
+                            }}
+                            >
+                                <div style={{
+                                    position: 'absolute',
+                                    top: '-15px',
+                                    left: '50%',
+                                    transform: 'translateX(-50%)',
+                                    background: '#ffd700',
+                                    color: '#1a1a2e',
+                                    padding: '5px 20px',
+                                    borderRadius: '20px',
+                                    fontSize: '0.85rem',
+                                    fontWeight: '700'
+                                }}>{t('mostPopular')}</div>
+                                <h3 style={{
+                                    fontSize: '1.8rem',
+                                    fontWeight: '700',
+                                    color: 'white',
+                                    marginBottom: '15px'
+                                }}>{t('professional')}</h3>
+                                <div style={{
+                                    fontSize: '3rem',
+                                    fontWeight: '700',
+                                    color: 'white',
+                                    marginBottom: '10px'
+                                }}>
+                                    {t('from')}<br/>CHF 1400
+                                </div>
+                                <p style={{
+                                    fontSize: '0.9rem',
+                                    color: 'rgba(255, 255, 255, 0.8)',
+                                    marginBottom: '30px'
+                                }}>{t('perProject')}</p>
+                                <ul style={{
+                                    textAlign: 'left',
+                                    listStyle: 'none',
+                                    padding: 0,
+                                    margin: '0 0 30px 0',
+                                    flex: 1
+                                }}>
+                                    {['4-8 ' + t('pagesIncluded'), '✓ ' + t('responsive'), '✓ ' + t('seo'), '✓ ' + t('contactForm'), '✓ ' + t('hosting'), '✓ ' + t('animationsBasic'), '4 ' + t('revisions'), '60 ' + t('days') + ' ' + t('support')].map((feature, i) => (
+                                        <li key={i} style={{
+                                            padding: '10px 0',
+                                            borderBottom: '1px solid rgba(255,255,255,0.1)',
+                                            color: 'white',
+                                            fontSize: '0.95rem'
+                                        }}>{feature}</li>
+                                    ))}
+                                </ul>
+                                <button
+                                    onClick={() => setCurrentPage('contact')}
+                                    style={{
+                                        width: '100%',
+                                        padding: '15px',
+                                        background: 'white',
+                                        color: '#667eea',
+                                        border: 'none',
+                                        borderRadius: '8px',
+                                        fontSize: '1rem',
+                                        fontWeight: '700',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onMouseOver={(e) => {
+                                        e.target.style.background = 'rgba(255,255,255,0.9)';
+                                        e.target.style.transform = 'scale(1.02)';
+                                    }}
+                                    onMouseOut={(e) => {
+                                        e.target.style.background = 'white';
+                                        e.target.style.transform = 'scale(1)';
+                                    }}
+                                >
+                                    {t('selectPackage')}
+                                </button>
+                            </div>
+
+                            {/* Premium Package */}
+                            <div style={{
+                                background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)',
+                                padding: '40px 30px',
+                                borderRadius: '20px',
+                                border: darkMode ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.1)',
+                                transition: 'all 0.3s ease',
+                                display: 'flex',
+                                flexDirection: 'column'
+                            }}
+                            onMouseOver={(e) => {
+                                e.currentTarget.style.transform = 'translateY(-5px)';
+                                e.currentTarget.style.boxShadow = darkMode 
+                                    ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                                    : '0 10px 30px rgba(0, 0, 0, 0.1)';
+                            }}
+                            onMouseOut={(e) => {
+                                e.currentTarget.style.transform = 'translateY(0)';
+                                e.currentTarget.style.boxShadow = 'none';
+                            }}
+                            >
+                                <h3 style={{
+                                    fontSize: '1.8rem',
+                                    fontWeight: '700',
+                                    color: darkMode ? 'white' : '#1a1a2e',
+                                    marginBottom: '15px'
+                                }}>{t('premium')}</h3>
+                                <div style={{
+                                    fontSize: '3rem',
+                                    fontWeight: '700',
+                                    color: '#667eea',
+                                    marginBottom: '10px'
+                                }}>
+                                    {t('from')}<br/>CHF 2200
+                                </div>
+                                <p style={{
+                                    fontSize: '0.9rem',
+                                    color: darkMode ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.5)',
+                                    marginBottom: '30px'
+                                }}>{t('perProject')}</p>
+                                <ul style={{
+                                    textAlign: 'left',
+                                    listStyle: 'none',
+                                    padding: 0,
+                                    margin: '0 0 30px 0',
+                                    flex: 1
+                                }}>
+                                    {['9+ ' + t('pagesIncluded'), '✓ ' + t('responsive'), '✓ ' + t('seo'), '✓ ' + t('contactForm'), '✓ ' + t('hosting'), '✓ ' + t('animationsAdvanced'), '✓ ' + t('customFeatures'), t('unlimited') + ' ' + t('revisions'), '90 ' + t('days') + ' ' + t('support'), '✓ ' + t('prioritySupport')].map((feature, i) => (
+                                        <li key={i} style={{
+                                            padding: '10px 0',
+                                            borderBottom: darkMode ? '1px solid rgba(255,255,255,0.05)' : '1px solid rgba(0,0,0,0.05)',
+                                            color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.7)',
+                                            fontSize: '0.95rem'
+                                        }}>{feature}</li>
+                                    ))}
+                                </ul>
+                                <button
+                                    onClick={() => setCurrentPage('contact')}
+                                    style={{
+                                        width: '100%',
+                                        padding: '15px',
+                                        background: '#667eea',
+                                        color: 'white',
+                                        border: 'none',
+                                        borderRadius: '8px',
+                                        fontSize: '1rem',
+                                        fontWeight: '600',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onMouseOver={(e) => {
+                                        e.target.style.background = '#5568d3';
+                                    }}
+                                    onMouseOut={(e) => {
+                                        e.target.style.background = '#667eea';
+                                    }}
+                                >
+                                    {t('selectPackage')}
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Consultation Info */}
+                        <div style={{
+                            marginTop: '60px',
+                            padding: '30px',
+                            background: darkMode ? 'rgba(102, 126, 234, 0.1)' : 'rgba(102, 126, 234, 0.05)',
+                            borderRadius: '15px',
+                            border: darkMode ? '1px solid rgba(102, 126, 234, 0.3)' : '1px solid rgba(102, 126, 234, 0.2)',
+                            textAlign: 'center'
+                        }}>
+                            <div style={{ fontSize: '2.5rem', marginBottom: '15px' }}>💡</div>
+                            <h3 style={{
+                                fontSize: '1.5rem',
+                                fontWeight: '600',
+                                color: darkMode ? 'white' : '#1a1a2e',
+                                marginBottom: '10px'
+                            }}>{t('consultationTitle')}</h3>
+                            <p style={{
+                                fontSize: '1rem',
+                                color: darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.6)',
+                                marginBottom: '15px',
+                                lineHeight: '1.6'
+                            }}>{t('consultationDesc')}</p>
+                            <p style={{
+                                fontSize: '1.3rem',
+                                fontWeight: '700',
+                                color: '#667eea',
+                                marginBottom: '15px'
+                            }}>CHF 150 / Stunde</p>
+                            <button
+                                onClick={() => setCurrentPage('contact')}
+                                style={{
+                                    padding: '12px 30px',
+                                    background: '#667eea',
+                                    color: 'white',
+                                    border: 'none',
+                                    borderRadius: '8px',
+                                    fontSize: '1rem',
+                                    fontWeight: '600',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.3s ease'
+                                }}
+                                onMouseOver={(e) => {
+                                    e.target.style.background = '#5568d3';
+                                }}
+                                onMouseOut={(e) => {
+                                    e.target.style.background = '#667eea';
+                                }}
+                            >
+                                {t('getStarted')}
+                            </button>
+                        </div>
                     </div>
                     ) : currentPage === 'contact' ? (
                     <div style={{
@@ -962,76 +1899,240 @@
                             <input type="hidden" name="_next" value={window.location.href} />
                             <input type="text" name="_honey" style={{display: 'none'}} />
 
-                            <div style={{ marginBottom: '20px', textAlign: 'left' }}>
-                                <label style={{
-                                    display: 'block',
-                                    marginBottom: '8px',
-                                    color: darkMode ? 'white' : '#1a1a2e',
-                                    fontWeight: '600',
-                                    fontSize: 'clamp(0.9rem, 2vw, 1rem)'
-                                }}>
-                                    {t('yourName')} *
-                                </label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required
-                                    style={{
-                                        width: '100%',
-                                        padding: '12px 15px',
-                                        borderRadius: '8px',
-                                        border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
-                                        background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                            {/* First Name & Last Name Side by Side */}
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
+                                <div style={{ textAlign: 'left' }}>
+                                    <label style={{
+                                        display: 'block',
+                                        marginBottom: '8px',
                                         color: darkMode ? 'white' : '#1a1a2e',
-                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-                                        outline: 'none',
-                                        transition: 'all 0.3s ease'
-                                    }}
-                                    onFocus={(e) => {
-                                        e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
-                                        e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
-                                    }}
-                                    onBlur={(e) => {
-                                        e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
-                                        e.target.style.boxShadow = 'none';
-                                    }}
-                                />
+                                        fontWeight: '600',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                    }}>
+                                        {t('yourFirstName')} *
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        required
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 15px',
+                                            borderRadius: '8px',
+                                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                            background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                            color: darkMode ? 'white' : '#1a1a2e',
+                                            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                            outline: 'none',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onFocus={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                            e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                        }}
+                                        onBlur={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                            e.target.style.boxShadow = 'none';
+                                        }}
+                                    />
+                                </div>
+
+                                <div style={{ textAlign: 'left' }}>
+                                    <label style={{
+                                        display: 'block',
+                                        marginBottom: '8px',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        fontWeight: '600',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                    }}>
+                                        {t('yourLastName')} *
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        required
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 15px',
+                                            borderRadius: '8px',
+                                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                            background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                            color: darkMode ? 'white' : '#1a1a2e',
+                                            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                            outline: 'none',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onFocus={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                            e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                        }}
+                                        onBlur={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                            e.target.style.boxShadow = 'none';
+                                        }}
+                                    />
+                                </div>
                             </div>
 
-                            <div style={{ marginBottom: '20px', textAlign: 'left' }}>
-                                <label style={{
-                                    display: 'block',
-                                    marginBottom: '8px',
-                                    color: darkMode ? 'white' : '#1a1a2e',
-                                    fontWeight: '600',
-                                    fontSize: 'clamp(0.9rem, 2vw, 1rem)'
-                                }}>
-                                    {t('yourEmail')} *
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    required
-                                    style={{
-                                        width: '100%',
-                                        padding: '12px 15px',
-                                        borderRadius: '8px',
-                                        border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
-                                        background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                            {/* Email & Phone Side by Side */}
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
+                                <div style={{ textAlign: 'left' }}>
+                                    <label style={{
+                                        display: 'block',
+                                        marginBottom: '8px',
                                         color: darkMode ? 'white' : '#1a1a2e',
-                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-                                        outline: 'none',
-                                        transition: 'all 0.3s ease'
-                                    }}
-                                    onFocus={(e) => {
-                                        e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
-                                        e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
-                                    }}
-                                    onBlur={(e) => {
-                                        e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
-                                        e.target.style.boxShadow = 'none';
-                                    }}
-                                />
+                                        fontWeight: '600',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                    }}>
+                                        {t('yourEmail')} *
+                                    </label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        required
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 15px',
+                                            borderRadius: '8px',
+                                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                            background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                            color: darkMode ? 'white' : '#1a1a2e',
+                                            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                            outline: 'none',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onFocus={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                            e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                        }}
+                                        onBlur={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                            e.target.style.boxShadow = 'none';
+                                        }}
+                                    />
+                                </div>
+
+                                <div style={{ textAlign: 'left' }}>
+                                    <label style={{
+                                        display: 'block',
+                                        marginBottom: '8px',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        fontWeight: '600',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                    }}>
+                                        {t('yourPhone')} *
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        required
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 15px',
+                                            borderRadius: '8px',
+                                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                            background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                            color: darkMode ? 'white' : '#1a1a2e',
+                                            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                            outline: 'none',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onFocus={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                            e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                        }}
+                                        onBlur={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                            e.target.style.boxShadow = 'none';
+                                        }}
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Service & Package Dropdowns Side by Side */}
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
+                                <div style={{ textAlign: 'left' }}>
+                                    <label style={{
+                                        display: 'block',
+                                        marginBottom: '8px',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        fontWeight: '600',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                    }}>
+                                        {t('selectService')} {t('phoneOptional')}
+                                    </label>
+                                    <select
+                                        name="service"
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 15px',
+                                            borderRadius: '8px',
+                                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                            background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                            color: darkMode ? 'white' : '#1a1a2e',
+                                            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                            outline: 'none',
+                                            transition: 'all 0.3s ease',
+                                            cursor: 'pointer'
+                                        }}
+                                        onFocus={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                            e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                        }}
+                                        onBlur={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                            e.target.style.boxShadow = 'none';
+                                        }}
+                                    >
+                                        <option value="">{t('selectService')}...</option>
+                                        <option value="Landing Page">{t('serviceLandingPage')}</option>
+                                        <option value="Business Website">{t('serviceBusinessWebsite')}</option>
+                                        <option value="Portfolio Website">{t('servicePortfolio')}</option>
+                                        <option value="Coming Soon Page">{t('serviceComingSoon')}</option>
+                                        <option value="Other">{t('serviceOther')}</option>
+                                    </select>
+                                </div>
+
+                                <div style={{ textAlign: 'left' }}>
+                                    <label style={{
+                                        display: 'block',
+                                        marginBottom: '8px',
+                                        color: darkMode ? 'white' : '#1a1a2e',
+                                        fontWeight: '600',
+                                        fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                    }}>
+                                        {t('selectPackage')} {t('phoneOptional')}
+                                    </label>
+                                    <select
+                                        name="package"
+                                        style={{
+                                            width: '100%',
+                                            padding: '12px 15px',
+                                            borderRadius: '8px',
+                                            border: darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)',
+                                            background: darkMode ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.8)',
+                                            color: darkMode ? 'white' : '#1a1a2e',
+                                            fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                                            outline: 'none',
+                                            transition: 'all 0.3s ease',
+                                            cursor: 'pointer'
+                                        }}
+                                        onFocus={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(102, 126, 234, 0.5)' : '1px solid rgba(102, 126, 234, 0.7)';
+                                            e.target.style.boxShadow = '0 0 10px rgba(102, 126, 234, 0.3)';
+                                        }}
+                                        onBlur={(e) => {
+                                            e.target.style.border = darkMode ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(0, 0, 0, 0.2)';
+                                            e.target.style.boxShadow = 'none';
+                                        }}
+                                    >
+                                        <option value="">{t('selectPackage')}...</option>
+                                        <option value="Basic">{t('basic')}</option>
+                                        <option value="Professional">{t('professional')}</option>
+                                        <option value="Premium">{t('premium')}</option>
+                                        <option value="Consultation">{t('consultationTitle')}</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div style={{ marginBottom: '20px', textAlign: 'left' }}>
@@ -1457,6 +2558,12 @@
                     </button>
 
                     <style>{`
+                        select option {
+                            background-color: ${darkMode ? '#1a1a2e' : 'white'};
+                            color: ${darkMode ? 'white' : '#1a1a2e'};
+                            padding: 10px;
+                        }
+
                         @keyframes float {
                             0%, 100% {
                                 transform: translateY(0px);
