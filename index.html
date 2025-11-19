@@ -29,6 +29,17 @@
             width: 100vw;
             height: 100vh;
         }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+            }
+        }
     </style>
 </head>
 <body>
@@ -49,6 +60,7 @@
                 heroTitle: 'Professionelle Websites',
                 heroSubtitle: 'Moderne Frontend-Entwicklung für Ihr Business',
                 heroDescription: 'Wir erstellen massgeschneiderte Frontend-Websites - schnell, sicher und perfekt für Ihre Bedürfnisse.',
+                freeConsultation: 'Kostenlose Erstberatung (30 Min.)',
                 getStarted: 'Jetzt starten',
                 learnMore: 'Mehr erfahren',
                 // Services Section
@@ -64,6 +76,27 @@
                 comingSoonPageDesc: 'Ansprechende Vorschauseiten für Ihre geplante Website.',
                 consultationTitle: 'Beratung & Konzept',
                 consultationDesc: 'Persönliche Beratung für Ihr Webprojekt - von der Idee bis zum Konzept.',
+                // Calculator
+                calculatorTitle: 'Projekt-Rechner',
+                calculatorSubtitle: 'Berechnen Sie den ungefähren Preis für Ihr Projekt',
+                numberOfPages: 'Anzahl der Seiten',
+                designComplexity: 'Design-Komplexität',
+                simple: 'Einfach',
+                simpleDesc: 'Einfaches Layout, wenig Inhalte (z.B. Coming Soon, einfache Landing Page)',
+                medium: 'Mittel',
+                mediumDesc: 'Mehrere Sektionen, mehr Inhalte (z.B. Business-Website, Portfolio)',
+                complex: 'Komplex',
+                complexDesc: 'Umfangreiche Inhalte, spezielle Layouts (z.B. große Portfolios, komplexe Business-Sites)',
+                additionalFeatures: 'Zusätzliche Features',
+                contactFormFeature: 'Kontaktformular',
+                animationsFeature: 'Animationen',
+                seoOptimization: 'SEO-Optimierung',
+                customDesign: 'Custom Design',
+                includeRevisions: 'Überarbeitungen inklusive',
+                revisionsInfo: 'Ohne Überarbeitungen: Änderungen werden separat berechnet',
+                estimatedPrice: 'Geschätzter Preis',
+                getQuote: 'Angebot anfordern',
+                priceEstimate: 'Dies ist eine Schätzung. Der finale Preis wird nach Projektbesprechung festgelegt.',
                 // Features
                 featuresTitle: 'Was Sie erhalten',
                 responsiveDesign: 'Responsive Design',
@@ -75,7 +108,7 @@
                 modernTech: 'Moderne Technologien',
                 modernTechDesc: 'HTML5, CSS3, JavaScript',
                 hostingSetup: 'Hosting-Setup',
-                hostingSetupDesc: 'Inklusive GitHub Pages Konfiguration',
+                hostingSetupDesc: 'Professionelles Hosting inklusive',
                 maintenance: 'Wartungsfreundlich',
                 maintenanceDesc: 'Einfach zu aktualisieren und anzupassen',
                 // Pricing
@@ -174,6 +207,7 @@
                 heroTitle: 'Professional Websites',
                 heroSubtitle: 'Modern Frontend Development for Your Business',
                 heroDescription: 'We create custom frontend websites - fast, secure and perfect for your needs.',
+                freeConsultation: 'Free Initial Consultation (30 Min.)',
                 getStarted: 'Get Started',
                 learnMore: 'Learn More',
                 // Services Section
@@ -189,6 +223,27 @@
                 comingSoonPageDesc: 'Engaging preview pages for your planned website.',
                 consultationTitle: 'Consultation & Concept',
                 consultationDesc: 'Personal consultation for your web project - from idea to concept.',
+                // Calculator
+                calculatorTitle: 'Project Calculator',
+                calculatorSubtitle: 'Calculate the approximate price for your project',
+                numberOfPages: 'Number of Pages',
+                designComplexity: 'Design Complexity',
+                simple: 'Simple',
+                simpleDesc: 'Simple layout, minimal content (e.g. Coming Soon, simple landing page)',
+                medium: 'Medium',
+                mediumDesc: 'Multiple sections, more content (e.g. business website, portfolio)',
+                complex: 'Complex',
+                complexDesc: 'Extensive content, special layouts (e.g. large portfolios, complex business sites)',
+                additionalFeatures: 'Additional Features',
+                contactFormFeature: 'Contact Form',
+                animationsFeature: 'Animations',
+                seoOptimization: 'SEO Optimization',
+                customDesign: 'Custom Design',
+                includeRevisions: 'Include Revisions',
+                revisionsInfo: 'Without revisions: Changes will be billed separately',
+                estimatedPrice: 'Estimated Price',
+                getQuote: 'Get Quote',
+                priceEstimate: 'This is an estimate. Final price will be determined after project discussion.',
                 // Features
                 featuresTitle: 'What You Get',
                 responsiveDesign: 'Responsive Design',
@@ -200,7 +255,7 @@
                 modernTech: 'Modern Technologies',
                 modernTechDesc: 'HTML5, CSS3, JavaScript',
                 hostingSetup: 'Hosting Setup',
-                hostingSetupDesc: 'Including GitHub Pages configuration',
+                hostingSetupDesc: 'Professional hosting included',
                 maintenance: 'Easy Maintenance',
                 maintenanceDesc: 'Simple to update and customize',
                 // Pricing
@@ -314,6 +369,27 @@
                 comingSoonPageDesc: 'Pages de prévisualisation attrayantes pour votre site web planifié.',
                 consultationTitle: 'Conseil & Concept',
                 consultationDesc: 'Conseil personnalisé pour votre projet web - de l\'idée au concept.',
+                // Calculator
+                calculatorTitle: 'Calculateur de Projet',
+                calculatorSubtitle: 'Calculez le prix estimé pour votre projet',
+                numberOfPages: 'Nombre de pages',
+                designComplexity: 'Complexité du design',
+                simple: 'Simple',
+                simpleDesc: 'Mise en page simple, contenu minimal (par ex. Coming Soon, landing page simple)',
+                medium: 'Moyen',
+                mediumDesc: 'Plusieurs sections, plus de contenu (par ex. site business, portfolio)',
+                complex: 'Complexe',
+                complexDesc: 'Contenu étendu, mises en page spéciales (par ex. grands portfolios, sites business complexes)',
+                additionalFeatures: 'Fonctionnalités supplémentaires',
+                contactFormFeature: 'Formulaire de contact',
+                animationsFeature: 'Animations',
+                seoOptimization: 'Optimisation SEO',
+                customDesign: 'Design personnalisé',
+                includeRevisions: 'Révisions incluses',
+                revisionsInfo: 'Sans révisions: Les modifications seront facturées séparément',
+                estimatedPrice: 'Prix estimé',
+                getQuote: 'Demander un devis',
+                priceEstimate: 'Ceci est une estimation. Le prix final sera déterminé après discussion du projet.',
                 // Features
                 featuresTitle: 'Ce Que Vous Obtenez',
                 responsiveDesign: 'Design Responsive',
@@ -325,7 +401,7 @@
                 modernTech: 'Technologies Modernes',
                 modernTechDesc: 'HTML5, CSS3, JavaScript',
                 hostingSetup: 'Configuration Hébergement',
-                hostingSetupDesc: 'Configuration GitHub Pages incluse',
+                hostingSetupDesc: 'Hébergement professionnel inclus',
                 maintenance: 'Maintenance Facile',
                 maintenanceDesc: 'Simple à mettre à jour et personnaliser',
                 // Pricing
@@ -424,6 +500,7 @@
                 heroTitle: 'Faqe Interneti Profesionale',
                 heroSubtitle: 'Zhvillim Modern Frontend për Biznesin Tuaj',
                 heroDescription: 'Ne krijojmë faqe interneti frontend të personalizuara - të shpejta, të sigurta dhe të përsosura për nevojat tuaja.',
+                freeConsultation: 'Konsultim Fillestar Falas (30 Min.)',
                 getStarted: 'Filloni Tani',
                 learnMore: 'Mësoni Më Shumë',
                 // Services Section
@@ -439,6 +516,27 @@
                 comingSoonPageDesc: 'Faqe tërheqëse parapamjeje për faqen tuaj të planifikuar.',
                 consultationTitle: 'Konsultim & Koncept',
                 consultationDesc: 'Konsultim personal për projektin tuaj web - nga ideja deri te koncepti.',
+                // Calculator
+                calculatorTitle: 'Llogaritësi i Projektit',
+                calculatorSubtitle: 'Llogaritni çmimin e përafërt për projektin tuaj',
+                numberOfPages: 'Numri i faqeve',
+                designComplexity: 'Kompleksiteti i dizajnit',
+                simple: 'I thjeshtë',
+                simpleDesc: 'Dizajn i thjeshtë, përmbajtje minimale (p.sh. Coming Soon, landing page e thjeshtë)',
+                medium: 'Mesatar',
+                mediumDesc: 'Seksione të shumta, më shumë përmbajtje (p.sh. faqe biznesi, portfolio)',
+                complex: 'Kompleks',
+                complexDesc: 'Përmbajtje e gjerë, dizajne speciale (p.sh. portfolio të mëdha, faqe biznesi komplekse)',
+                additionalFeatures: 'Veçori shtesë',
+                contactFormFeature: 'Formulari i kontaktit',
+                animationsFeature: 'Animacionet',
+                seoOptimization: 'Optimizimi SEO',
+                customDesign: 'Dizajn i personalizuar',
+                includeRevisions: 'Përfshirë rishikimet',
+                revisionsInfo: 'Pa rishikime: Ndryshimet do të faturohen veç e veç',
+                estimatedPrice: 'Çmimi i vlerësuar',
+                getQuote: 'Kërkoni ofertë',
+                priceEstimate: 'Kjo është një vlerësim. Çmimi final do të përcaktohet pas diskutimit të projektit.',
                 // Features
                 featuresTitle: 'Çfarë Merrni',
                 responsiveDesign: 'Dizajn Responsive',
@@ -450,7 +548,7 @@
                 modernTech: 'Teknologji Moderne',
                 modernTechDesc: 'HTML5, CSS3, JavaScript',
                 hostingSetup: 'Konfigurimi i Hostingut',
-                hostingSetupDesc: 'Përfshirë konfigurimin e GitHub Pages',
+                hostingSetupDesc: 'Hosting profesional i përfshirë',
                 maintenance: 'Mirëmbajtje e Lehtë',
                 maintenanceDesc: 'E thjeshtë për t\'u përditësuar dhe personalizuar',
                 // Pricing
@@ -544,12 +642,21 @@
             const [dots, setDots] = useState('');
             const [currentPage, setCurrentPage] = useState('home');
             const [showCookieBanner, setShowCookieBanner] = useState(true);
-            const [darkMode, setDarkMode] = useState(true);
+            const [darkMode, setDarkMode] = useState(false);
             const [language, setLanguage] = useState('de');
             const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
             const [formStatus, setFormStatus] = useState('');
             const [isSubmitting, setIsSubmitting] = useState(false);
             const [touchStart, setTouchStart] = useState(null);
+            
+            // Calculator state
+            const [numPages, setNumPages] = useState(5);
+            const [complexity, setComplexity] = useState('medium');
+            const [features, setFeatures] = useState({
+                animations: false,
+                customDesign: false,
+                includeRevisions: true
+            });
             const [touchEnd, setTouchEnd] = useState(null);
             const [isPulling, setIsPulling] = useState(false);
             const [pullDistance, setPullDistance] = useState(0);
@@ -628,6 +735,49 @@
             const declineCookies = () => {
                 localStorage.setItem('cookieConsent', 'false');
                 setShowCookieBanner(false);
+            };
+
+            // Calculate revisions cost based on page count
+            const getRevisionsCost = () => {
+                if (numPages <= 3) return 100;
+                if (numPages <= 8) return 200;
+                return 300;
+            };
+
+            // Calculator price calculation
+            const calculatePrice = () => {
+                // Base prices aligned exactly with packages (includes revisions)
+                let basePrice;
+                if (numPages <= 3) {
+                    // Basis package: 1-3 pages, from CHF 700
+                    basePrice = 700 + (numPages - 1) * 50; // 700, 750, 800
+                } else if (numPages <= 8) {
+                    // Professional package: 4-8 pages, from CHF 1400
+                    basePrice = 1400 + (numPages - 4) * 100; // 1400, 1500, 1600, 1700, 1800
+                } else {
+                    // Premium package: 9+ pages, from CHF 2200
+                    basePrice = 2200 + (numPages - 9) * 100; // 2200, 2300, 2400...
+                }
+                
+                // Complexity multiplier
+                const complexityMultiplier = {
+                    simple: 1.0,    // base price (minimum as advertised)
+                    medium: 1.15,   // 15% more for medium complexity
+                    complex: 1.3    // 30% more for complex
+                };
+                
+                let finalPrice = basePrice * complexityMultiplier[complexity];
+                
+                // Subtract revisions cost if not wanted
+                if (!features.includeRevisions) {
+                    finalPrice -= getRevisionsCost();
+                }
+                
+                // Add additional features
+                if (features.animations) finalPrice += 300;
+                if (features.customDesign) finalPrice += 500;
+
+                return Math.round(finalPrice);
             };
 
             const handleFormSubmit = async (e) => {
@@ -724,36 +874,7 @@
                         position: 'relative',
                         overflow: 'hidden'
                     }}
-                    onTouchStart={onTouchStart}
-                    onTouchMove={onTouchMove}
-                    onTouchEnd={onTouchEnd}
                 >
-                    {/* Pull to Refresh Indicator */}
-                    {isPulling && (
-                        <div style={{
-                            position: 'fixed',
-                            top: `${pullDistance - 40}px`,
-                            left: '50%',
-                            transform: 'translateX(-50%)',
-                            zIndex: 9999,
-                            background: darkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
-                            backdropFilter: 'blur(10px)',
-                            borderRadius: '50%',
-                            padding: '15px',
-                            transition: 'opacity 0.3s ease',
-                            opacity: pullDistance > 80 ? 1 : 0.5
-                        }}>
-                            <div style={{
-                                width: '30px',
-                                height: '30px',
-                                border: `3px solid ${darkMode ? 'white' : '#1a1a2e'}`,
-                                borderTopColor: 'transparent',
-                                borderRadius: '50%',
-                                animation: pullDistance > 80 ? 'spin 1s linear infinite' : 'none',
-                                transform: `rotate(${pullDistance * 3}deg)`
-                            }}></div>
-                        </div>
-                    )}
                     {/* Navigation Bar */}
                     <nav style={{
                         width: '100%',
@@ -1266,12 +1387,36 @@
                             <p style={{
                                 fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)',
                                 color: darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.6)',
-                                marginBottom: '40px',
+                                marginBottom: '30px',
                                 maxWidth: '700px',
-                                margin: '0 auto 40px'
+                                margin: '0 auto 30px'
                             }}>
                                 {t('heroDescription')}
                             </p>
+                            {/* Free Consultation Badge */}
+                            <div style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '10px',
+                                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                padding: '12px 24px',
+                                borderRadius: '50px',
+                                marginBottom: '40px',
+                                boxShadow: '0 4px 15px rgba(102, 126, 234, 0.3)',
+                                animation: 'pulse 2s ease-in-out infinite'
+                            }}>
+                                <i className="fas fa-gift" style={{ 
+                                    color: 'white',
+                                    fontSize: '1.2rem'
+                                }}></i>
+                                <span style={{
+                                    color: 'white',
+                                    fontWeight: '600',
+                                    fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                                }}>
+                                    {t('freeConsultation')}
+                                </span>
+                            </div>
                             {/* CTA Buttons */}
                             <div style={{
                                 display: 'flex',
@@ -1283,6 +1428,7 @@
                                     onClick={() => setCurrentPage('contact')}
                                     style={{
                                         padding: '15px 40px',
+                                        minWidth: '160px',
                                         background: '#667eea',
                                         color: 'white',
                                         border: 'none',
@@ -1310,6 +1456,7 @@
                                     onClick={() => setCurrentPage('services')}
                                     style={{
                                         padding: '15px 40px',
+                                        minWidth: '160px',
                                         background: 'transparent',
                                         color: darkMode ? 'white' : '#1a1a2e',
                                         border: darkMode ? '2px solid rgba(255, 255, 255, 0.3)' : '2px solid rgba(0, 0, 0, 0.3)',
@@ -1336,8 +1483,8 @@
                         {/* Features Grid */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                            gap: '30px',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                            gap: '20px',
                             marginTop: '60px'
                         }}>
                             {[
@@ -1504,15 +1651,39 @@
                         <p style={{
                             fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
                             color: darkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.7)',
-                            marginBottom: '60px'
+                            marginBottom: '20px'
                         }}>
                             {t('pricingSubtitle')}
                         </p>
+                        
+                        {/* Free Consultation Info */}
+                        <div style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            background: darkMode ? 'rgba(102, 126, 234, 0.15)' : 'rgba(102, 126, 234, 0.1)',
+                            padding: '10px 20px',
+                            borderRadius: '50px',
+                            marginBottom: '60px',
+                            border: darkMode ? '1px solid rgba(102, 126, 234, 0.3)' : '1px solid rgba(102, 126, 234, 0.2)'
+                        }}>
+                            <i className="fas fa-gift" style={{ 
+                                color: '#667eea',
+                                fontSize: '1rem'
+                            }}></i>
+                            <span style={{
+                                color: darkMode ? 'rgba(255, 255, 255, 0.9)' : '#1a1a2e',
+                                fontWeight: '600',
+                                fontSize: '0.95rem'
+                            }}>
+                                {t('freeConsultation')}
+                            </span>
+                        </div>
 
                         {/* Pricing Cards */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                             gap: '30px',
                             alignItems: 'stretch'
                         }}>
