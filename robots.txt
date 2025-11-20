@@ -1,0 +1,10 @@
+# robots.txt for RBC Excellence
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+# Sitemap location
+Sitemap: https://rbc-excellence.com/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 10
