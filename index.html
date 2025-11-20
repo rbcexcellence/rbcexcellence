@@ -3,13 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RBC Excellence - Coming Soon. Etwas Großartiges ist in Vorbereitung. Bleiben Sie gespannt auf unsere innovativen Lösungen und Services.">
-    <meta name="keywords" content="RBC Excellence, Coming Soon, Innovation, Excellence">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="RBC Excellence - Professionelles Webdesign & Frontend Entwicklung in der Schweiz. Responsive Websites, Single-Page Applications und moderne Weblösungen ab CHF 700. Kostenlose Erstberatung!">
+    <meta name="keywords" content="Webdesign Schweiz, Frontend Entwicklung, Website erstellen, Responsive Webdesign, React Entwicklung, Single Page Application, Webentwicklung Zürich, Homepage erstellen, Webdesigner Schweiz, moderne Website">
     <meta name="author" content="RBC Excellence">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="German">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rbc-excellence.com">
+    <meta property="og:title" content="RBC Excellence - Webdesign & Frontend Entwicklung">
+    <meta property="og:description" content="Professionelles Webdesign & Frontend Entwicklung in der Schweiz. Responsive Websites ab CHF 700. Kostenlose Erstberatung!">
+    <meta property="og:image" content="https://rbc-excellence.com/logo.png">
+    <meta property="og:locale" content="de_CH">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rbc-excellence.com">
+    <meta property="twitter:title" content="RBC Excellence - Webdesign & Frontend Entwicklung">
+    <meta property="twitter:description" content="Professionelles Webdesign & Frontend Entwicklung in der Schweiz. Responsive Websites ab CHF 700.">
+    <meta property="twitter:image" content="https://rbc-excellence.com/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rbc-excellence.com">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com data:; img-src 'self' data:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
-    <title>RBC Excellence - Webdesign & Frontend Entwicklung</title>
-    <link rel="icon" type="image/png" href="logo.png">
+    <title>RBC Excellence - Webdesign & Frontend Entwicklung | Schweiz</title>
+    
+    <!-- Favicons for all devices -->
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="logo.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="logo.png">
+    <link rel="shortcut icon" href="logo.png">
+    <meta name="msapplication-TileImage" content="logo.png">
+    <meta name="msapplication-TileColor" content="#667eea">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data (JSON-LD) for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "RBC Excellence",
+      "description": "Professionelles Webdesign & Frontend Entwicklung in der Schweiz",
+      "url": "https://rbc-excellence.com",
+      "logo": "https://rbc-excellence.com/logo.png",
+      "telephone": "+41786047499",
+      "email": "cekaj.riart@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CH"
+      },
+      "priceRange": "CHF 700 - CHF 2200+",
+      "areaServed": "CH",
+      "serviceType": ["Webdesign", "Frontend Entwicklung", "Website Erstellung"],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Basis Paket",
+          "price": "700",
+          "priceCurrency": "CHF",
+          "description": "Landing Page / Portfolio bis 3 Seiten"
+        },
+        {
+          "@type": "Offer",
+          "name": "Professionell Paket",
+          "price": "1400",
+          "priceCurrency": "CHF",
+          "description": "Umfangreiche Website bis 7 Seiten"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium Paket",
+          "price": "2200",
+          "priceCurrency": "CHF",
+          "description": "Komplexe Web-Applikation ab 10 Seiten"
+        },
+        {
+          "@type": "Offer",
+          "name": "Kostenlose Erstberatung",
+          "price": "0",
+          "priceCurrency": "CHF",
+          "description": "30 Minuten kostenlose Beratung"
+        }
+      ]
+    }
+    </script>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -172,7 +260,16 @@
                 imprintTitle: 'Impressum',
                 cookieText: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Mit der Nutzung unserer Website stimmen Sie unserer',
                 privacyPolicy: 'Datenschutzerklärung',
-                cookieAccept: 'Akzeptieren',
+                cookieAccept: 'Alle akzeptieren',
+                cookieSettings: 'Einstellungen',
+                cookieNecessary: 'Notwendige',
+                cookieAnalytics: 'Analyse',
+                cookieMarketing: 'Marketing',
+                cookieSavePreferences: 'Auswahl speichern',
+                cookieNecessaryDesc: 'Diese Cookies sind für die Funktionalität der Website erforderlich.',
+                cookieAnalyticsDesc: 'Helfen uns zu verstehen, wie Besucher mit der Website interagieren.',
+                cookieMarketingDesc: 'Werden verwendet, um Besuchern relevante Werbung zu zeigen.',
+                cookiePreferencesTitle: 'Cookie-Einstellungen',
                 cookieDecline: 'Ablehnen',
                 responsible: 'Verantwortliche Stelle',
                 responsibleText: 'Verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:',
@@ -319,7 +416,16 @@
                 imprintTitle: 'Imprint',
                 cookieText: 'We use cookies to improve your experience. By using our website, you agree to our',
                 privacyPolicy: 'Privacy Policy',
-                cookieAccept: 'Accept',
+                cookieAccept: 'Accept All',
+                cookieSettings: 'Settings',
+                cookieNecessary: 'Necessary',
+                cookieAnalytics: 'Analytics',
+                cookieMarketing: 'Marketing',
+                cookieSavePreferences: 'Save Preferences',
+                cookieNecessaryDesc: 'These cookies are required for the website to function.',
+                cookieAnalyticsDesc: 'Help us understand how visitors interact with the website.',
+                cookieMarketingDesc: 'Used to show visitors relevant advertising.',
+                cookiePreferencesTitle: 'Cookie Preferences',
                 cookieDecline: 'Decline',
                 responsible: 'Responsible Party',
                 responsibleText: 'The responsible party for data processing on this website is:',
@@ -354,6 +460,7 @@
                 heroTitle: 'Sites Web Professionnels',
                 heroSubtitle: 'Développement Frontend Moderne pour Votre Entreprise',
                 heroDescription: 'Nous créons des sites web frontend sur mesure - rapides, sécurisés et parfaits pour vos besoins.',
+                freeConsultation: 'Consultation Initiale Gratuite (30 Min.)',
                 getStarted: 'Commencer',
                 learnMore: 'En savoir plus',
                 // Services Section
@@ -465,7 +572,16 @@
                 imprintTitle: 'Mentions légales',
                 cookieText: 'Nous utilisons des cookies pour améliorer votre expérience. En utilisant notre site web, vous acceptez notre',
                 privacyPolicy: 'Politique de confidentialité',
-                cookieAccept: 'Accepter',
+                cookieAccept: 'Tout accepter',
+                cookieSettings: 'Paramètres',
+                cookieNecessary: 'Nécessaires',
+                cookieAnalytics: 'Analytiques',
+                cookieMarketing: 'Marketing',
+                cookieSavePreferences: 'Enregistrer les préférences',
+                cookieNecessaryDesc: 'Ces cookies sont nécessaires au fonctionnement du site.',
+                cookieAnalyticsDesc: 'Nous aident à comprendre comment les visiteurs interagissent avec le site.',
+                cookieMarketingDesc: 'Utilisés pour afficher des publicités pertinentes aux visiteurs.',
+                cookiePreferencesTitle: 'Préférences de cookies',
                 cookieDecline: 'Refuser',
                 responsible: 'Responsable',
                 responsibleText: 'Le responsable du traitement des données sur ce site web est:',
@@ -612,7 +728,16 @@
                 imprintTitle: 'Impressum',
                 cookieText: 'Ne përdorim cookies për të përmirësuar përvojën tuaj. Duke përdorur faqen tonë, ju pranoni',
                 privacyPolicy: 'Politikën e Privatësisë',
-                cookieAccept: 'Prano',
+                cookieAccept: 'Prano të gjitha',
+                cookieSettings: 'Cilësimet',
+                cookieNecessary: 'Të nevojshme',
+                cookieAnalytics: 'Analitike',
+                cookieMarketing: 'Marketing',
+                cookieSavePreferences: 'Ruaj preferencat',
+                cookieNecessaryDesc: 'Këto cookies janë të nevojshme për funksionimin e faqes.',
+                cookieAnalyticsDesc: 'Na ndihmojnë të kuptojmë se si vizitorët ndërveprojnë me faqen.',
+                cookieMarketingDesc: 'Përdoren për të shfaqur reklama relevante për vizitorët.',
+                cookiePreferencesTitle: 'Preferencat e Cookies',
                 cookieDecline: 'Refuzo',
                 responsible: 'Përgjegjësi',
                 responsibleText: 'Përgjegjësi për përpunimin e të dhënave në këtë faqe është:',
@@ -642,6 +767,12 @@
             const [dots, setDots] = useState('');
             const [currentPage, setCurrentPage] = useState('home');
             const [showCookieBanner, setShowCookieBanner] = useState(true);
+            const [showCookieSettings, setShowCookieSettings] = useState(false);
+            const [cookiePreferences, setCookiePreferences] = useState({
+                necessary: true,
+                analytics: true,
+                marketing: true
+            });
             const [darkMode, setDarkMode] = useState(false);
             const [language, setLanguage] = useState('de');
             const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -673,6 +804,15 @@
                 const cookieConsent = localStorage.getItem('cookieConsent');
                 if (cookieConsent) {
                     setShowCookieBanner(false);
+                    // Load saved cookie preferences
+                    const savedPreferences = localStorage.getItem('cookiePreferences');
+                    if (savedPreferences) {
+                        try {
+                            setCookiePreferences(JSON.parse(savedPreferences));
+                        } catch (e) {
+                            console.error('Error parsing cookie preferences:', e);
+                        }
+                    }
                 }
                 const savedMode = localStorage.getItem('darkMode');
                 if (savedMode !== null) {
@@ -728,13 +868,40 @@
             };
 
             const acceptCookies = () => {
+                const allAccepted = { necessary: true, analytics: true, marketing: true };
                 localStorage.setItem('cookieConsent', 'true');
+                localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted));
+                setCookiePreferences(allAccepted);
                 setShowCookieBanner(false);
+                setShowCookieSettings(false);
             };
 
             const declineCookies = () => {
+                const onlyNecessary = { necessary: true, analytics: false, marketing: false };
                 localStorage.setItem('cookieConsent', 'false');
+                localStorage.setItem('cookiePreferences', JSON.stringify(onlyNecessary));
+                setCookiePreferences(onlyNecessary);
                 setShowCookieBanner(false);
+                setShowCookieSettings(false);
+            };
+
+            const saveCookiePreferences = () => {
+                localStorage.setItem('cookieConsent', 'custom');
+                localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences));
+                setShowCookieBanner(false);
+                setShowCookieSettings(false);
+            };
+
+            const toggleCookiePreference = (type) => {
+                if (type === 'necessary') return; // Can't disable necessary cookies
+                setCookiePreferences(prev => {
+                    const newPreferences = {
+                        ...prev,
+                        [type]: !prev[type]
+                    };
+                    localStorage.setItem('cookiePreferences', JSON.stringify(newPreferences));
+                    return newPreferences;
+                });
             };
 
             // Calculate revisions cost based on page count
@@ -2431,7 +2598,7 @@
                                     <a href="https://twitter.com/rbcexcellence" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                                         <i className="fab fa-twitter"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/rbc-excellence-b412b8396" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                    <a href="https://www.linkedin.com/in/rbc-excellence-995602396/" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                                         <i className="fab fa-linkedin"></i>
                                     </a>
                                     <a href="https://www.tiktok.com/@rbcexcellence" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? 'white' : '#1a1a2e', fontSize: '2rem', textDecoration: 'none', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.2)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
@@ -2580,7 +2747,7 @@
                     ) : null}
                     </div>
 
-                    {/* Cookie Banner */}
+                    {/* Cookie Banner (simple) */}
                     {showCookieBanner && (
                         <div style={{
                             position: 'fixed',
