@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transparente Preise für Webdesign-Dienstleistungen. Pakete ab CHF 700.">
+    <title>Preise - RBC Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo.png">
+    <style>
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+
+        .pricing-card {
+            background: rgba(0, 0, 0, 0.03);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.dark-mode .pricing-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .pricing-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: scale(1.05);
+            position: relative;
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .pricing-card.featured * {
+            color: white !important;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffd700;
+            color: #1a1a2e;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .pricing-card.featured .price {
+            color: white;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        body.dark-mode .pricing-features li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .pricing-card.featured .pricing-features li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .pricing-card.featured .btn-secondary {
+            background: white !important;
+            color: #667eea !important;
+            border: 2px solid white !important;
+        }
+
+        .pricing-card.featured .btn-secondary:hover {
+            background: #f8f9fa !important;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <img src="logo.png" alt="RBC Excellence Logo">
+            <div class="nav-links">
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="services.html" data-i18n="services">Leistungen</a>
+                <a href="pricing.html" class="active" data-i18n="pricing">Preise</a>
+                <a href="contact.html" data-i18n="contact">Kontakt</a>
+                <div class="lang-switcher">
+                    <button data-lang="de">DE</button>
+                    <button data-lang="en">EN</button>
+                    <button data-lang="fr">FR</button>
+                    <button data-lang="sq">SQ</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container fade-in">
+        <section class="hero">
+            <h1 data-i18n="pricingTitle">Transparente Preise</h1>
+            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-bottom: 20px;" data-i18n="pricingSubtitle">
+                Faire Pakete für jedes Budget
+            </p>
+            
+            <!-- Free Consultation Info -->
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(102, 126, 234, 0.1); padding: 10px 20px; border-radius: 50px; border: 1px solid rgba(102, 126, 234, 0.2);">
+                <i class="fas fa-gift" style="color: #667eea; font-size: 1rem;"></i>
+                <span style="font-weight: 600; font-size: 0.95rem;" data-i18n="freeConsultation">
+                    Kostenlose Erstberatung (30 Min.)
+                </span>
+            </div>
+        </section>
+
+        <div class="pricing-cards">
+            <!-- Basic Package -->
+            <div class="pricing-card">
+                <h3 style="font-size: 1.8rem; font-weight: 700;" data-i18n="packageBasic">Basis</h3>
+                <div class="price" data-i18n="price700">ab<br>CHF 700</div>
+                <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px;" data-i18n="perProject">pro Projekt</p>
+                <ul class="pricing-features">
+                    <li data-i18n="basic1">1-3 Seiten inklusive</li>
+                    <li data-i18n="basic2">✓ Responsive Design</li>
+                    <li data-i18n="basic3">✓ SEO-Grundlagen</li>
+                    <li data-i18n="basic4">✓ Kontaktformular</li>
+                    <li data-i18n="basic5">✓ Hosting-Setup</li>
+                    <li data-i18n="basic6">2 Überarbeitungen</li>
+                    <li data-i18n="basic7">30 Tage Support</li>
+                </ul>
+                <a href="contact.html" class="btn btn-secondary" style="width: 100%;" data-i18n="selectPackage">Paket wählen</a>
+            </div>
+
+            <!-- Professional Package (Featured) -->
+            <div class="pricing-card featured">
+                <div class="popular-badge" data-i18n="mostPopular">Beliebteste</div>
+                <h3 style="font-size: 1.8rem; font-weight: 700;" data-i18n="packagePro">Professionell</h3>
+                <div class="price" data-i18n="price1400">ab<br>CHF 1400</div>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 20px;" data-i18n="perProject">pro Projekt</p>
+                <ul class="pricing-features">
+                    <li data-i18n="pro1">4-8 Seiten inklusive</li>
+                    <li data-i18n="pro2">✓ Responsive Design</li>
+                    <li data-i18n="pro3">✓ SEO-Grundlagen</li>
+                    <li data-i18n="pro4">✓ Kontaktformular</li>
+                    <li data-i18n="pro5">✓ Hosting-Setup</li>
+                    <li data-i18n="pro6">✓ Basis-Animationen</li>
+                    <li data-i18n="pro7">4 Überarbeitungen</li>
+                    <li data-i18n="pro8">60 Tage Support</li>
+                </ul>
+                <a href="contact.html" class="btn btn-secondary" style="width: 100%;" data-i18n="selectPackage">Paket wählen</a>
+            </div>
+
+            <!-- Premium Package -->
+            <div class="pricing-card">
+                <h3 style="font-size: 1.8rem; font-weight: 700;" data-i18n="packagePremium">Premium</h3>
+                <div class="price" data-i18n="price2200">ab<br>CHF 2200</div>
+                <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 20px;" data-i18n="perProject">pro Projekt</p>
+                <ul class="pricing-features">
+                    <li data-i18n="premium1">9+ Seiten inklusive</li>
+                    <li data-i18n="premium2">✓ Responsive Design</li>
+                    <li data-i18n="premium3">✓ SEO-Grundlagen</li>
+                    <li data-i18n="premium4">✓ Kontaktformular</li>
+                    <li data-i18n="premium5">✓ Hosting-Setup</li>
+                    <li data-i18n="premium6">✓ Erweiterte Animationen</li>
+                    <li data-i18n="premium7">✓ Individuelle Funktionen</li>
+                    <li data-i18n="premium8">Unbegrenzt Überarbeitungen</li>
+                    <li data-i18n="premium9">90 Tage Support</li>
+                    <li data-i18n="premium10">✓ Prioritäts-Support</li>
+                </ul>
+                <a href="contact.html" class="btn btn-secondary" style="width: 100%;" data-i18n="selectPackage">Paket wählen</a>
+            </div>
+        </div>
+
+        <!-- Consultation Section -->
+        <div style="margin-top: 60px; padding: 30px; background: rgba(102, 126, 234, 0.05); border-radius: 15px; border: 1px solid rgba(102, 126, 234, 0.2); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div style="font-size: 2.5rem; margin-bottom: 15px;">💡</div>
+            <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px;" data-i18n="consultationTitle">Beratung & Konzept</h3>
+            <p style="font-size: 1rem; margin-bottom: 15px; line-height: 1.6;" data-i18n="consultationDesc">
+                Persönliche Beratung für Ihr Webprojekt - von der Idee bis zum Konzept.
+            </p>
+            <p style="font-size: 1.3rem; font-weight: 700; color: #667eea; margin-bottom: 15px;" data-i18n="consultationPrice">CHF 150 / Stunde</p>
+            <a href="contact.html" class="btn btn-primary" data-i18n="getStarted">Jetzt starten</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RBC Excellence</h3>
+                <p data-i18n="footerAbout">Professionelles Webdesign & Frontend Entwicklung in der Schweiz.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rbcexcellence" target="_blank" rel="noopener" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rbc-excellence-995602396/" target="_blank" rel="noopener" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@rbcexcellence" target="_blank" rel="noopener" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-i18n="footerContact">Kontakt</h3>
+                <p>📧 <a href="mailto:cekaj.riart@outlook.com">cekaj.riart@outlook.com</a></p>
+                <p>📞 <a href="tel:+41786047499">+41 78 604 74 99</a></p>
+                <p>📍 8400 Winterthur, Schweiz</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-i18n="footerLinks">Links</h3>
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="services.html" data-i18n="services">Leistungen</a>
+                <a href="pricing.html" data-i18n="pricing">Preise</a>
+                <a href="contact.html" data-i18n="contact">Kontakt</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-i18n="footerLegal">Rechtliches</h3>
+                <a href="imprint.html" data-i18n="imprint">Impressum</a>
+                <a href="privacy.html" data-i18n="privacy">Datenschutzerklärung</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <span data-i18n="copyright">© 2025 RBC Excellence - Alle Rechte vorbehalten</span>
+        </div>
+    </footer>
+
+    <button class="dark-mode-toggle" title="Dark Mode umschalten">
+        🌙
+    </button>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

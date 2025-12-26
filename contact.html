@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktieren Sie RBC Excellence für Ihr Webdesign-Projekt.">
+    <title>Kontakt - RBC Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo.png">
+    <style>
+        .contact-form {
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: clamp(25px, 5vw, 40px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body.dark-mode .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.8);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            outline: none;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group select,
+        body.dark-mode .form-group textarea {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border: 1px solid rgba(102, 126, 234, 0.7);
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info {
+            text-align: left;
+            max-width: 800px;
+            margin: 40px auto;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            line-height: 1.8;
+        }
+
+        .contact-info h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        body.dark-mode .contact-item a {
+            color: #667eea;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <img src="logo.png" alt="RBC Excellence Logo">
+            <div class="nav-links">
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="services.html" data-i18n="services">Leistungen</a>
+                <a href="pricing.html" data-i18n="pricing">Preise</a>
+                <a href="contact.html" class="active" data-i18n="contact">Kontakt</a>
+                <div class="lang-switcher">
+                    <button data-lang="de">DE</button>
+                    <button data-lang="en">EN</button>
+                    <button data-lang="fr">FR</button>
+                    <button data-lang="sq">SQ</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container fade-in">
+        <section class="hero">
+            <h1 data-i18n="contactTitle">Kontaktieren Sie uns</h1>
+            <p style="font-size: clamp(1rem, 2.5vw, 1.2rem);" data-i18n="contactSubtitle">
+                Haben Sie Fragen oder möchten Sie mehr erfahren? Schreiben Sie uns eine Nachricht!
+            </p>
+        </section>
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="https://formsubmit.co/cekaj.riart@outlook.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="Neue Kontaktanfrage von RBC Excellence Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://rbc-excellence.com/contact.html">
+            <input type="text" name="_honey" style="display: none;">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName" data-i18n="formFirstName">Vorname *</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName" data-i18n="formLastName">Nachname *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email" data-i18n="formEmail">E-Mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" data-i18n="formPhone">Telefon *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="service">Gewünschte Leistung (optional)</label>
+                    <select id="service" name="service">
+                        <option value="">Gewünschte Leistung...</option>
+                        <option value="Landing Page">Landing Page</option>
+                        <option value="Business Website">Business Website</option>
+                        <option value="Portfolio Website">Portfolio Website</option>
+                        <option value="Coming Soon Page">Coming Soon Page</option>
+                        <option value="Other">Andere / Beratung</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="package">Gewünschtes Paket (optional)</label>
+                    <select id="package" name="package">
+                        <option value="">Gewünschtes Paket...</option>
+                        <option value="Basic">Basis</option>
+                        <option value="Professional">Professionell</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Consultation">Beratung</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="message">Ihre Nachricht *</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;" data-i18n="formSubmit">
+                Nachricht senden
+            </button>
+        </form>
+
+        <!-- Direct Contact Info -->
+        <div class="contact-info">
+            <h3>Unsere Kontaktdaten:</h3>
+            
+            <div class="contact-item">
+                <span style="font-size: 1.5rem;">📧</span>
+                <div>
+                    <strong>E-Mail:</strong>
+                    <a href="mailto:cekaj.riart@outlook.com">cekaj.riart@outlook.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <span style="font-size: 1.5rem;">📞</span>
+                <div>
+                    <strong>Telefon:</strong>
+                    <a href="tel:+41786047499">+41 78 604 74 99</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <span style="font-size: 1.5rem;">📍</span>
+                <div>
+                    <strong>Adresse:</strong> 8400 Winterthur, Schweiz
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div style="margin-top: 40px;">
+                <h3 style="text-align: center;">Folge uns</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rbcexcellence" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rbc-excellence-995602396/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@rbcexcellence" target="_blank" rel="noopener noreferrer" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RBC Excellence</h3>
+                <p data-i18n="footerAbout">Professionelles Webdesign & Frontend Entwicklung in der Schweiz.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rbcexcellence" target="_blank" rel="noopener" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rbc-excellence-995602396/" target="_blank" rel="noopener" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@rbcexcellence" target="_blank" rel="noopener" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-i18n="footerContact">Kontakt</h3>
+                <p>📧 <a href="mailto:cekaj.riart@outlook.com">cekaj.riart@outlook.com</a></p>
+                <p>📞 <a href="tel:+41786047499">+41 78 604 74 99</a></p>
+                <p>📍 8400 Winterthur, Schweiz</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-i18n="footerLinks">Links</h3>
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="services.html" data-i18n="services">Leistungen</a>
+                <a href="pricing.html" data-i18n="pricing">Preise</a>
+                <a href="contact.html" data-i18n="contact">Kontakt</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3 data-i18n="footerLegal">Rechtliches</h3>
+                <a href="imprint.html" data-i18n="imprint">Impressum</a>
+                <a href="privacy.html" data-i18n="privacy">Datenschutzerklärung</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <span data-i18n="copyright">© 2025 RBC Excellence - Alle Rechte vorbehalten</span>
+        </div>
+    </footer>
+
+    <button class="dark-mode-toggle" title="Dark Mode umschalten">
+        🌙
+    </button>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
